@@ -1,0 +1,12 @@
+%hitarea
+{
+    display: block;
+
+    content: '';
+    cursor: pointer;
+    pointer-events: auto;
+
+    background: transparent;
+
+    @include full-screen;
+}
