@@ -1,0 +1,27 @@
+# OS X
+*.DS_Store
+Icon
+Iconr
+Icon
+
+*.log
+
+# Python
+*.pyc
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+npm-debug.log
+
+# Sublime
+*.sublime-workspace
+
+# Bower
+bower_components
+
+# Project specific
+config/*
