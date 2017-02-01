@@ -1,4 +1,4 @@
-@mixin font-moothing()
+@mixin font-smoothing()
 {
     font-weight: 400;
     font-smooth: always;
@@ -37,7 +37,7 @@
                                   not supported by any browser */
 
     -webkit-touch-callout: none; /* iOS Safari */
-     -khtml-user-select: none; /* Konqueror */
+    -khtml-user-select: none; /* Konqueror */
 }
 
 @mixin touch-scroll()

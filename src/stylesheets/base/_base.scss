@@ -16,7 +16,7 @@ html
     text-shadow: none;
 
     filter: none;
-    @include font-moothing;
+    @include font-smoothing;
 }
 
 *
@@ -30,7 +30,6 @@ html
     {
         box-sizing: border-box;
     }
-
     &:focus
     {
         outline: none;
@@ -45,7 +44,6 @@ a
     outline: none;
 
     @include no-tap-highlight();
-
     &:focus,
     &:hover
     {
@@ -115,13 +113,11 @@ button
     @include no-tap-highlight();
     @include appearance(none);
     @include link-hover;
-
     &,
     & > *
     {
         cursor: pointer;
     }
-
     &:focus,
     &:hover
     {
