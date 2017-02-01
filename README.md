@@ -1,19 +1,19 @@
 # ![Gulp Starter](extras/demo/src/images/gulp-starter-logo.png)
 
-[![Build Status](https://travis-ci.org/vigetlabs/gulp-starter.svg?branch=static-server)](https://travis-ci.org/vigetlabs/gulp-starter)
+This is a fork of the original [gulp-starter](https://github.com/vigetlabs/gulp-starter) repo!
 
 Gulp Starter is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder, or can be configured and integrated into your own development environment and site or app structure. The [extras](./extras) folder contains configuration details for Rails and Craft, with more to follow. [Check out the compiled demo](http://vigetlabs.github.io/gulp-starter/) and play with [the source files](extras/demo)!
 
 ```bash
-git clone https://github.com/vigetlabs/gulp-starter.git MyApp
+git clone https://github.com/robertpataki/bp-gulp-starter MyApp
 cd MyApp
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 Features | Tools Used
 ------ | -----
-**CSS** | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps
+**CSS** | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Normalize CSS](https://necolas.github.io/normalize.css/), [Bourbon](http://bourbon.io/), [Susy](http://susy.oddbird.net/), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps
 **JavaScript** | [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/)
 **HTML** | [Nunjucks](https://mozilla.github.io/nunjucks/), [gulp-data](https://github.com/colynb/gulp-data), or bring your own
 **Images** | Compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin)
@@ -31,32 +31,32 @@ This has been tested on Node `0.12.x` - `5.9.0`, and should work on newer versio
 
 #### Install Dependencies
 ```bash
-npm install
+yarn install
 ```
 
 #### Run development tasks:
 ```
-npm start
+yarn start
 ```
-Aliases: `npm run gulp`, `npm run development`
+Aliases: `yarn run gulp`, `yarn run development`
 
 This is where the magic happens. The perfect front-end workflow. This runs the default gulp task, which starts compiling, watching, and live updating all our files as we change them. BrowserSync will start a server on port 3000, or do whatever you've configured it to do. You'll be able to see live changes in all connected browsers. Don't forget about the additional BrowserSync tools available on port 3001!
 
-Why run this as an npm script? NPM scripts add ./node_modules/bin to the path when run, using the packages version installed with this project, rather than a globally installed ones. Never `npm install -g` and get into mis-matched version issues again. These scripts are defined in the `scripts` property of `package.json`.
+Why run this as an yarn script? NPM scripts add ./node_modules/bin to the path when run, using the packages version installed with this project, rather than a globally installed ones. Never `npm install -g` and get into mis-matched version issues again. These scripts are defined in the `scripts` property of `package.json`.
 
 #### Run in tests in watch mode:
 ```bash
-npm run test:watch
+yarn run test:watch
 ```
 
 #### Run tests once:
 ```bash
-npm run test
+yarn run test
 ```
 
 #### Build production files:
 ```bash
-npm run production
+yarn run production
 ```
 
 ### Running the Demo
@@ -64,7 +64,7 @@ By default, the files in `src` are pretty minimal. If you're just exploring and 
 
 ```
 git checkout demo
-npm start
+yarn start
 ```
 
 ### Starting a fresh project
@@ -86,10 +86,10 @@ Not all configuration is exposed here. For advanced task configuration, you can 
 
 ### Start compiling, serving, and watching files
 ```
-npm run gulp
+yarn run gulp
 ```
 
-(or `npm run development`)
+(or `yarn run development`)
 
 This runs `gulp` from `./node_modules/bin`, using the version installed with this project, rather than a globally installed instance. All commands in the package.json `scripts` work this way. The `gulp` command runs the `default` task, defined in `gulpfile.js/tasks/default.js`.
 
@@ -98,7 +98,7 @@ All files will compile in development mode (uncompressed with source maps). [Bro
 To run any other existing task, simply add the task name after the `gulp` command. Example:
 
 ```bash
-npm run gulp production
+yarn run gulp production
 ```
 
 ## Asset Task Details
@@ -117,33 +117,33 @@ A `README.md` with details about each asset task are available in their respecti
 
 ### Build production-ready files
 ```
-npm run production
+yarn run production
 ```
 
 This will compile revisioned and compressed files to `./public`. To build production files and preview them locally, run
 
 ```
-npm run demo
+yarn run demo
 ```
 
 This will start a static server that serves your production files to http://localhost:5000. This is primarily meant as a way to preview your production build locally, not necessarily for use as a live production server.
 
 ### Run JavaScript Tests
 ```
-npm run test
+yarn run test
 ```
 Test files located in `__tests__` folders are picked up and run using
 [Karma](http://karma-runner.github.io/0.12/index.html), [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/), and [Sinon](http://sinonjs.org/). The test script right now first compiles a production build, and then, if successful runs Karma. This is nice when using something like [Travis CI](https://travis-ci.org/vigetlabs/gulp-starter) in that if an error occurs during the build step, Travis alerts me that it failed. To pass, the files have to compile properly AND pass the JS tests.
 
 ### Deploy to gh-pages
 ```
-npm run deploy
+yarn run deploy
 ```
 This task compiles production code and then uses [gulp-gh-pages](https://github.com/shinnn/gulp-gh-pages) to push the contents of your `dest.root` to a `gh-pages` (or other specified) branch, viewable at http://[your-username].github.io/[your-repo-name]. Be sure to update the `homepage` property in your `package.json`.
 
 GitHub Pages isn't the most robust of hosting solutions (you'll eventually run into relative path issues), but it's a great place to quickly share in-progress work, and you get it for free.
 
-[Surge.sh](http://surge.sh/) might be a good alternative for production-ready static hosting to check out, and is just as easy to deploy to. Where ever you're deploying to, all you need to do is `npm run gulp production` and transfer the contents of the `public` folder to your server however you see fit.
+[Surge.sh](http://surge.sh/) might be a good alternative for production-ready static hosting to check out, and is just as easy to deploy to. Where ever you're deploying to, all you need to do is `yarn run gulp production` and transfer the contents of the `public` folder to your server however you see fit.
 
 For non-static sites (Rails, Craft, etc.), make sure the `production` task runs as part of your deploy process.
 
