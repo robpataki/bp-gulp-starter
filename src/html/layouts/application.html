@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="stylesheets/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include "shared/app-icons.html" %}
-    {% block head %}{% endblock %}
   </head>
   <body>
     {% block content %}{% endblock %}
-    {% block javascript %}
-      <script src="javascripts/app.js"></script>
-    {% endblock %}
+    
+    {% include "shared/scripts.html" %}
   </body>
 </html>
