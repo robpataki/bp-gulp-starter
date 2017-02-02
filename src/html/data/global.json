@@ -1,7 +1,21 @@
 {
-  "title": "New Project",
-  "ga": {
-		"ua": "UA-XXXXXXXX-X",
-		"domain": ".xxx.com"
+	"site_meta": {
+		"title": "New Project",
+		"description": "A short description of your new project",
+		"base_url": "https://xxx.xxx",
+
+		"facebook": {
+			"image_url": "https://xxx.xxx/xxx.jpg"
+		},
+		"twitter": {
+			"handle": "@xxx"
+		}
+		
+	},
+	"tracking": {
+		"ga": {
+			"ua": "UA-XXXXXXXX-X",
+			"domain": ".xxx.xxx"
+		}
 	}
 }
