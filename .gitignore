@@ -25,3 +25,6 @@ bower_components
 
 # Project specific
 config/*
+
+# Compiled public folder
+public
