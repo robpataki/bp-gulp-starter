@@ -1,58 +1,173 @@
+/*
+NEW STRUCTURE
+
 rp-menu
-  menu menu--handheld
-  menu__header
-    menu__branding
-      menu__logo is--small
-    
-    menu__title
-    menu__burger
+  menu menu--desktop
+    menu__header
+      menu__branding
+        menu__logo is--large
+        menu__logo is--medium
+      menu__list
+        menu__item
 
-  menu__body
-    menu__list
-      menu__item
-      menu__item is-active
-      menu__sublist
+        menu__item is--active
+    menu__body
+      menu__list
+        menu__item is--active
+        menu__item
+
+  menu menu--handy
+    menu__header
+      menu__branding
+        menu__logo is--small
+      menu__title
+      menu__burger
+    menu__body
+      menu__list
         menu__item
         menu__item is-active
-      menu__sublist
-        menu__item
-        menu__item is-active
+        menu__list
+          menu__item
+          menu__item is-active
+*/
 
+$menu-padding: 20px 40px;
+$menu-nested-padding: 20px 60px;
+
+$menu-header-height: 90px;
+$menu-header-handy-height: 70px;
+$menu-body-height: 58px;
+
+$menu-header-bg-color: darken($c-brand-purple, 5);
+$menu-body-bg-color: $c-brand-purple;
+$menu-type-color: $c-white;
+$menu-active-type-color: $c-brand-yellow;
+
+$menu-border: 1px solid rgba(255, 255, 255, 0.2);
+
+
+/*
+
+  ## The Rules
+  
+  0. Use BEM, but keep it simple (*)
+  1. Always start with the Desktop version of a block (you're developing on a PC/Mac right? It will make your life easier.)
+  2. Elements nested within blocks change when a modifier is applied to the block (to avoid unnecessary element--modifier hell). Block with modifier is like a group of elements with different 'local' styles applied to elements.
+  3. Use SMACCS style 'is-something' markers to indicate state. this helps to keep a generic logic for states and reduces complexity.
+  4. Using tag selectors and sensible nesting is not all evil. There is nothing wrong with '.my-list li', or '.my-list > li > span'.
+
+*/
+
+
+
+/* BLOCK */
 .rp-menu {
   position: relative;
-  display: block;
-  z-index: 99;
   width: 100%;
-  top: 0;
+  z-index: 99;
+  user-select: none;
+  cursor: default;
 
-  &.is-handheld {
+  &.is-handy {
     position: absolute;
-    height: 100%;
     overflow: hidden;
+    height: 100%;
   }
 }
 
 .menu {
-
+  color: $menu-type-color;
 }
 
-.menu__branding {
 
-}
 
-/*
-  Handheld menu
-*/
-.menu--handheld {
-  .menu__header {
-
-  }
-
-  .menu__branding {
-
-  }
-}
-
+/* ELEMENT */
 .menu__header {
+  background: $menu-header-bg-color;
+  height: $menu-header-height;
 
+  display: flex;
+  align-items: center;
+}
+
+.menu__body {
+  background: $menu-body-bg-color;
+  padding: $menu-padding;
+  height: $menu-body-height;
+
+  display: flex;
+  align-items: center;
+}
+
+.menu__list {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  list-style: none;
+  @include clearfix;
+
+  & > li {
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    float: left;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    &.is-active {
+      color: $menu-active-type-color;
+    }
+  }
+}
+
+.menu__single-link {
+  padding: $menu-padding;
+  border-bottom: $menu-border;
+}
+
+
+
+/* MODIFIER */
+.menu--handy {
+  .menu__header {
+    height: $menu-header-handy-height;
+  }
+
+  .menu__body {
+    display: block;
+    height: auto;
+    padding: 0;
+    align-items: inherit;
+
+    .menu__list li {
+      margin-right: 0;
+    }
+
+    .menu__list > li > .menu__list > li {
+      border-bottom: $menu-border;
+
+      &:first-child {
+        padding: $menu-padding; 
+      }
+
+      &:not(:first-child) {
+        padding: $menu-nested-padding;
+      }
+    }
+  }
+
+
+  .menu__list {
+    display: block;
+
+    & > li {
+      display: block;
+      float: none;
+      line-height: 100%;
+    }
+  }
 }
