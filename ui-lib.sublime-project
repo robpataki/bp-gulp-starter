@@ -13,13 +13,13 @@
 	],
 	"settings":
 	{
-		"font_size": 16,
+		"font_size": 14,
 		"rulers":
 		[
 			72
 		],
-		"tab_size": 4,
-		"translate_tabs_to_spaces": false,
+		"tab_size": 2,
+		"translate_tabs_to_spaces": true,
 		"word_wrap": true
 	}
 }

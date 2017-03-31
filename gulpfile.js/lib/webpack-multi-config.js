@@ -20,9 +20,19 @@ module.exports = function(env) {
 
   var webpackConfig = {
     context: jsSrc,
-    plugins: [],
+    plugins: [
+      new webpack.ProvidePlugin({
+        '$': 'jquery',
+        'jQuery': 'jquery',
+        'window.jquery': 'jquery'
+      })
+    ],
     resolve: {
       root: jsSrc,
+      modulesDirectories: [
+        'node_modules',
+        'modules',
+      ],
       extensions: [''].concat(extensions)
     },
     module: {

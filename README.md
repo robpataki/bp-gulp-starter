@@ -1,4 +1,17 @@
-# ![Gulp Starter](extras/demo/src/images/gulp-starter-logo.png)
+## UI Lib Component Criteria
+
+- Semantic
+- Accessible
+- Responsive
+- Follow SMACCS for organising the stylesheets (base, layout, states, no nesting, classnames for styling)
+- Use BEM for styling
+- Self containing (local vars and styling blocks)
+- Modern browsers only (IE11+)
+
+
+===
+
+## ![Gulp Starter](extras/demo/src/images/gulp-starter-logo.png)
 
 This is a fork of the original [gulp-starter](https://github.com/vigetlabs/gulp-starter) repo!
 

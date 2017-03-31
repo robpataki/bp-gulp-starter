@@ -7,21 +7,5 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-  <div class="l-page">
-    <div class="l-content">
-      <h1 class="page__title">／人◕ ‿‿ ◕人＼</h1>
-
-      <div class="form">
-        <div class="form__callout">
-          <h2 class="form__title">Example form</h2>
-          <form>
-            <input type="text" name="" value="" placeholder="Input field #1" class="form__input">
-            <input type="text" name="" value="" placeholder="Input field #2" class="form__input">
-            <input type="text" name="" value="" placeholder="Input field #3" class="form__input">
-            <button type="button" name="button" class="form__button">Click me</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include 'shared/ui/menu.html' %}
 {% endblock %}
