@@ -51,6 +51,7 @@ $rp-menu_burger-piece-height: 3px;
   cursor: default;
 
   .menu {
+    width: 100%;
     color: $rp-menu_type-color;
   }
 
@@ -120,7 +121,7 @@ $rp-menu_burger-piece-height: 3px;
 
     transition-property: opacity, transform;
     transition-duration: 0.1s;
-    transition-timing-function: ease-out;
+    transition-timing-function: $ease-out-expo;
   }
 
   .menu__burger {
@@ -150,7 +151,7 @@ $rp-menu_burger-piece-height: 3px;
       left: 0;
       margin-top: 0;
       
-      transition-timing-function: ease-out;
+      transition-timing-function: $ease-out-expo;
       transform-origin: 50% 50%;
 
       &:nth-child(1) {

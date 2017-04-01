@@ -105,15 +105,18 @@ export default class RPMenu {
   open() {
     this.isMenuOpen = true;
 
-    // Show the menu items
-    this.$handyBody.scrollTop = 0;
     this.$handyBody.show();
+
+    // Open the active menu group
+    const $activeMenuItem = this.$handyMenu.find('.menu__list > li.is-active');
+    if ($activeMenuItem.length) {
+      $activeMenuItem.parent().addClass('is-toggled');
+    }
   }
 
   close() {
     this.isMenuOpen = false;
 
-    // Hide the menu items
     this.$handyBody.hide();
   }
 }
