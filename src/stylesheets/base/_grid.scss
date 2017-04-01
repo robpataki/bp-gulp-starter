@@ -11,9 +11,9 @@ $grid-gutter-widths: (
   md: $grid-gutter-width-base, // 30px
   lg: $grid-gutter-width-base, // 30px
   xl: $grid-gutter-width-base  // 30px
-)
+);
 
-/* $grid-breakpoints: (
+$grid-breakpoints: (
   // Extra small screen / phone
   xs: 0,
   // Small screen / phone
@@ -31,4 +31,4 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px
-); */
+);

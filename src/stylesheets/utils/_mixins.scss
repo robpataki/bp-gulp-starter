@@ -59,7 +59,7 @@
 
 @mixin link-hover($duration: .12s)
 {
-    @include transition-property(opacity, color, border, background, transform); //Simply override if not needed
-    @include transition-duration($duration);
-    @include transition-timing-function(ease-out);
+    transition-property: opacity, color, border, background, transform; //Simply override if not needed
+    transition-duration: $duration;
+    transition-timing-function: ease-out;
 }

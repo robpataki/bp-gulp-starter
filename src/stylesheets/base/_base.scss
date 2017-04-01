@@ -97,7 +97,7 @@ button {
   background: none;
 
   @include no-tap-highlight();
-  @include appearance(none);
+  appearance: none;
   @include link-hover;
   
   &,
@@ -125,7 +125,7 @@ input:-webkit-autofill:active {
 }
 
 /* Text selection colour */
-@include selection() {
+::selection {
   color: $c-brand-purple;
   background: $c-brand-yellow;
 }
