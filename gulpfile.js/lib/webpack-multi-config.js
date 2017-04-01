@@ -38,7 +38,14 @@ module.exports = function(env) {
     },
 
     module: {
-      rules: [{}]
+      rules: [{
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['es2015', 'stage-1'] }
+        }],
+      }]
     }
   }
 
@@ -85,9 +92,8 @@ module.exports = function(env) {
           'NODE_ENV': JSON.stringify('production')
         }
       }),
-      new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin(),
-      new webpack.NoErrorsPlugin()
+      new webpack.NoEmitOnErrorsPlugin()
     )
   }
 
