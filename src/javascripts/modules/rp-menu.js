@@ -112,6 +112,13 @@ export default class RPMenu {
     if ($activeMenuItem.length) {
       $activeMenuItem.parent().addClass('is-toggled');
     }
+
+    this.$handyBody.scrollTop(0);
+    const bodyTop = this.$handyBody.offset().top;
+    const currentMenuGroupTop = $activeMenuItem.parent().offset().top;
+    const targetBodyTop = currentMenuGroupTop - bodyTop;
+
+    this.$handyBody.scrollTop(targetBodyTop);
   }
 
   close() {
