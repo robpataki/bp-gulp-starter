@@ -40,7 +40,7 @@
         "includePaths": [
           "./node_modules/normalize.css/",
           "./node_modules/bourbon/app/assets/stylesheets/",
-          "./node_modules/susy/sass/"
+          "./node_modules/bootstrap/scss/"
         ]
       },
       "extensions": ["sass", "scss", "css"]

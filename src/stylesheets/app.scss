@@ -1,7 +1,7 @@
 // Vendor imports
 @import 'normalize';
 @import 'bourbon';
-@import 'susy';
+@import 'bootstrap-grid';
 
 // Utils
 @import 'utils/variables';
@@ -10,7 +10,6 @@
 
 // Base styling
 @import 'base/fonts';
-@import 'base/grid';
 @import 'base/base';
 
 // Components
