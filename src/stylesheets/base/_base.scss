@@ -1,6 +1,6 @@
 body,
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $regular-font;
   font-size: 100%;
   line-height: 1.625;
 
@@ -43,6 +43,14 @@ a {
     text-decoration: none;
     outline: none;
   }
+}
+
+h1, h2 {
+  font-family: $bold-font;
+}
+
+p {
+  font-family: $regular-font;
 }
 
 img {

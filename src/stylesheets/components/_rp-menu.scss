@@ -49,11 +49,11 @@ $rp-menu_burger-piece-height: 3px;
   z-index: 99;
   user-select: none;
   cursor: default;
-  font-weight: 600;
 
   .menu {
     width: 100%;
     color: $rp-menu_type-color;
+    font-family: $bold-font;
   }
 
   /* ELEMENT */
@@ -62,7 +62,6 @@ $rp-menu_burger-piece-height: 3px;
     background: $rp-menu_header-bg-color;
     height: $rp-menu_header-height;
     padding: 0 $rp-menu_side-padding;
-
     display: flex;
     align-items: center;
   }
@@ -183,7 +182,11 @@ $rp-menu_burger-piece-height: 3px;
   .menu--desktop {
     .menu__logo--small {
       display: none;
-    }  
+    }
+
+    .menu__body {
+      font-family: $semibold-font;
+    }
   }
 
   .menu--handy {
@@ -277,6 +280,7 @@ $rp-menu_burger-piece-height: 3px;
 
         &:not(:first-child) {
           padding: $rp-menu_nested-padding;
+          font-family: $semibold-font;
           display: none;
         }
       }
