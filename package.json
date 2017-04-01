@@ -6,7 +6,7 @@
     "node": ">=0.12.0 ~5.9.0",
     "npm": ">=2.14.12 ~3.7.3"
   },
-  "homepage": "https://github.com/robertpataki/bp-gulp-starter",
+  "homepage": "https://robertpataki.github.io/bp-gulp-starter",
   "repository": {
     "type": "git",
     "url": "git@github.com:robertpataki/bp-gulp-starter.git"
