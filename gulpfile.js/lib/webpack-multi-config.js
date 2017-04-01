@@ -27,23 +27,18 @@ module.exports = function(env) {
         'window.jquery': 'jquery'
       })
     ],
+    
     resolve: {
-      root: jsSrc,
-      modulesDirectories: [
+      modules: [
+        jsSrc,
         'node_modules',
-        'modules',
+        'modules'
       ],
-      extensions: [''].concat(extensions)
+      enforceExtension: false
     },
+
     module: {
-      loaders: [
-        {
-          test: /\.js$/,
-          loader: 'babel-loader',
-          exclude: /node_modules/,
-          query: config.tasks.js.babel
-        }
-      ]
+      rules: [{}]
     }
   }
 
