@@ -21,23 +21,23 @@
 */
 
 // Local variables
-$menu-side-padding: 40px;
-$menu-padding: 20px $menu-side-padding;
-$menu-nested-padding: 20px 60px;
+$rp-menu_side-padding: 40px;
+$rp-menu_padding: 20px $rp-menu_side-padding;
+$rp-menu_nested-padding: 20px 60px;
 
-$menu-header-height: 90px;
-$menu-header-handy-height: 70px;
-$menu-body-height: 58px;
+$rp-menu_header-height: 90px;
+$rp-menu_header-handy-height: 70px;
+$rp-menu_body-height: 58px;
 
-$menu-header-bg-color: darken($c-brand-purple, 5);
-$menu-body-bg-color: $c-brand-purple;
-$menu-type-color: $c-white;
-$menu-active-type-color: $c-brand-yellow;
+$rp-menu_header-bg-color: darken($c-brand-purple, 5);
+$rp-menu_body-bg-color: $c-brand-purple;
+$rp-menu_type-color: $c-white;
+$rp-menu_active-type-color: $c-brand-yellow;
 
-$menu-border: 1px solid rgba(255, 255, 255, 0.2);
+$rp-menu_border: 1px solid rgba(255, 255, 255, 0.2);
 
-$menu-burger-piece-width: 32px;
-$menu-burger-piece-height: 3px;
+$rp-menu_burger-piece-width: 32px;
+$rp-menu_burger-piece-height: 3px;
 
 //===================================================
 
@@ -51,23 +51,23 @@ $menu-burger-piece-height: 3px;
   cursor: default;
 
   .menu {
-    color: $menu-type-color;
+    color: $rp-menu_type-color;
   }
 
   /* ELEMENT */
   .menu__header {
-    background: $menu-header-bg-color;
-    height: $menu-header-height;
-    padding: 0 $menu-side-padding;
+    background: $rp-menu_header-bg-color;
+    height: $rp-menu_header-height;
+    padding: 0 $rp-menu_side-padding;
 
     display: flex;
     align-items: center;
   }
 
   .menu__body {
-    background: $menu-body-bg-color;
-    padding: $menu-padding;
-    height: $menu-body-height;
+    background: $rp-menu_body-bg-color;
+    padding: $rp-menu_padding;
+    height: $rp-menu_body-height;
 
     display: flex;
     align-items: center;
@@ -95,8 +95,8 @@ $menu-burger-piece-height: 3px;
   }
 
   .menu__single-link {
-    padding: $menu-padding;
-    border-bottom: $menu-border;
+    padding: $rp-menu_padding;
+    border-bottom: $rp-menu_border;
   }
 
   .menu__branding {
@@ -108,7 +108,7 @@ $menu-burger-piece-height: 3px;
   }
 
   .menu__logo {
-    position: absolute;
+    position: static;
     height: 32px;
   }
 
@@ -122,8 +122,7 @@ $menu-burger-piece-height: 3px;
   }
 
   .menu__burger {
-    position: absolute;
-    right: $menu-side-padding;
+    right: $rp-menu_side-padding;
     display: inline-block;
     vertical-align: middle;
 
@@ -131,8 +130,8 @@ $menu-burger-piece-height: 3px;
       position: relative;
       display: inline-block;
       top: -1px;
-      width: $menu-burger-piece-width;
-      height: $menu-burger-piece-width;
+      width: $rp-menu_burger-piece-width;
+      height: $rp-menu_burger-piece-width;
       vertical-align: middle;
       overflow: hidden;
     }
@@ -141,10 +140,10 @@ $menu-burger-piece-height: 3px;
       content: "";
       display: inline-block;
       position: absolute;
-      width: $menu-burger-piece-width;
-      height: $menu-burger-piece-height;
+      width: $rp-menu_burger-piece-width;
+      height: $rp-menu_burger-piece-height;
       margin: 0 auto;
-      background: $menu-type-color;
+      background: $rp-menu_type-color;
       top: 50%;
       left: 0;
       margin-top: 0;
@@ -153,11 +152,11 @@ $menu-burger-piece-height: 3px;
       transform-origin: 50% 50%;
 
       &:nth-child(1) {
-        margin-top: -3 * $menu-burger-piece-height;
+        margin-top: -3 * $rp-menu_burger-piece-height;
       }
 
       &:nth-child(3) {
-        margin-top: 3 * $menu-burger-piece-height;
+        margin-top: 3 * $rp-menu_burger-piece-height;
       }
 
       &:nth-child(2) {
@@ -187,8 +186,8 @@ $menu-burger-piece-height: 3px;
     display: none;
 
     .menu__header {
-      height: $menu-header-handy-height;
-      border-bottom: $menu-border;
+      height: $rp-menu_header-handy-height;
+      border-bottom: $rp-menu_border;
     }
 
     .menu__body {
@@ -200,17 +199,16 @@ $menu-burger-piece-height: 3px;
       overflow: hidden;
       align-items: inherit;
       @include touch-scroll;
-      background: $menu-header-bg-color;
+      background: $rp-menu_body-bg-color;
+      top: $rp-menu_header-handy-height;
 
-      // top: $mobi-menu-header-height;
-
-      // Firefox hack, might not need it
-      /* &:after {
+      // A little Firefox hack
+      &:after {
         display: block;
         content: "";
         position: relative;
-        padding-bottom: $menu-header-handy-height;
-      } */
+        padding-bottom: $rp-menu_header-handy-height;
+      }
     }
 
     .menu__list {
@@ -247,14 +245,14 @@ $menu-burger-piece-height: 3px;
 
       // Grouped section links
       .menu__list > li {
-        border-bottom: $menu-border;
+        border-bottom: $rp-menu_border;
 
         &:first-child {
-          padding: $menu-padding; 
+          padding: $rp-menu_padding; 
         }
 
         &:not(:first-child) {
-          padding: $menu-nested-padding;
+          padding: $rp-menu_nested-padding;
           display: none;
         }
       }
@@ -275,15 +273,15 @@ html.is-rp-menu-open {
       .menu__burger-line {
         &:nth-child(2) {
           opacity: 0;
-          transform: translateX(-$menu-burger-piece-width);
+          transform: translateX(-$rp-menu_burger-piece-width);
         }
 
         &:nth-child(1) {
-          transform: rotateZ(45deg) translateY(2 * $menu-burger-piece-height) translateX(2 * $menu-burger-piece-height);
+          transform: rotateZ(45deg) translateY(2 * $rp-menu_burger-piece-height) translateX(2 * $rp-menu_burger-piece-height);
         }
 
         &:nth-child(3) {
-          transform: rotateZ(-45deg) translateY(-2.333 * $menu-burger-piece-height) translateX(2.333 * $menu-burger-piece-height);
+          transform: rotateZ(-45deg) translateY(-2.333 * $rp-menu_burger-piece-height) translateX(2.333 * $rp-menu_burger-piece-height);
         }
       }
     }
@@ -304,7 +302,7 @@ html.is-rp-menu-open {
   }
 
   .menu__list > li.is-active {
-    color: $menu-active-type-color;
+    color: $rp-menu_active-type-color;
   }
 
   .menu--handy {

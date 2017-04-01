@@ -1,12 +1,25 @@
 ## UI Lib Component Criteria
 
-- Semantic
-- Accessible
-- Responsive
+## Directives
+
+- Semantic DOM
+- Accessible content
+- Responsive UI
 - Follow SMACCS for organising the stylesheets (base, layout, states, no nesting, classnames for styling)
 - Use BEM for styling
 - Self containing (local vars and styling blocks)
 - Modern browsers only (IE11+)
+
+## Styling Rules
+
+  1. Focus on modern browsers only (IE9+)
+  2. Use BEM naming convention, but keep it simple (*)
+  3. Use SMACCS style states (.is-active, .is-open) instead of BEM modifiers
+  4. Isolate the component styling by nesting the BEM classes under .rp-menu
+  5. Always start with the Desktop version of a block (you're developing on a PC/Mac right? It will make your life easier.)
+  6. Elements nested within blocks change when a modifier is applied to the block (to avoid unnecessary element--modifier hell). Block with modifier is like a group of elements with different 'local' styles applied to elements.
+  7. Using tag selectors and sensible nesting is not evil. There is nothing wrong with '.my-list li', or '.my-list > li > span'. By grouping our block and element styling under .rp-menu we can make sure we are not overriding anything and other styles won't affect our component either.
+  8. Don't go too deep with nesting. More than 3 levels of nesting screams for a new block or element :)
 
 
 ===
