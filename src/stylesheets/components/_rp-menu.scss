@@ -21,9 +21,9 @@
 */
 
 // Local variables
-$rp-menu_side-padding: 40px;
-$rp-menu_padding: 20px $rp-menu_side-padding;
-$rp-menu_nested-padding: 20px 60px;
+$rp-menu_side-padding: 20px;
+$rp-menu_padding: 20px 60px;
+$rp-menu_nested-padding: 20px 80px;
 
 $rp-menu_header-height: 90px;
 $rp-menu_header-handy-height: 70px;
@@ -206,7 +206,7 @@ $rp-menu_burger-piece-height: 3px;
       background: $rp-menu_body-bg-color;
       top: $rp-menu_header-handy-height;
 
-      // A little Firefox hack
+      // A little Firefox hack to show the bottom of .menu__body
       &:after {
         display: block;
         content: "";
@@ -261,7 +261,7 @@ $rp-menu_burger-piece-height: 3px;
         border-bottom: $rp-menu_border;
 
         &:first-child {
-          padding: $rp-menu_padding; 
+          padding: $rp-menu_padding;
         }
 
         &:not(:first-child) {
