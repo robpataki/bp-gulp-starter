@@ -211,50 +211,51 @@ $menu-burger-piece-height: 3px;
         position: relative;
         padding-bottom: $menu-header-handy-height;
       } */
+    }
 
-      .menu__list {
+    .menu__list {
+      display: block;
+
+      & > li {
         display: block;
+        margin-right: 0;
+        float: none;
+        line-height: 100%;
 
-        & > li {
-          display: block;
-          margin-right: 0;
-          float: none;
-          line-height: 100%;
+        // Little arrow icon on the left from the item label
+        &:not(.menu__single-link):first-child {
+          cursor: pointer;
 
-          // Little arrow icon on the left from the item label
-          &:first-child {
-            cursor: pointer;
+          &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 14px;
+            height: 14px;
+            margin-top: 3px;
+            margin-left: -30px;
+            background: url('/images/arrow-down-menu.svg');
 
-            &:before {
-              position: absolute;
-              display: block;
-              content: '';
-              width: 14px;
-              height: 14px;
-              margin-top: 3px;
-              margin-left: -30px;
-              background: url('/images/arrow-down-menu.svg');
-
-              transform: rotateZ(0deg);
-              transform-origin: 50% 50%;
-              transition-property: transform;
-              transition-duration: 0.2s;
-              transition-timing-function: ease-out;
-            }
+            transform: rotateZ(0deg);
+            transform-origin: 50% 50%;
+            transition-property: transform;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
           }
+        }
+      }
 
-          // Grouped section links
-          & > .menu__list > li {
-            border-bottom: $menu-border;
+      // Grouped section links
+      .menu__list > li {
+        border-bottom: $menu-border;
 
-            &:first-child {
-              padding: $menu-padding; 
-            }
+        &:first-child {
+          padding: $menu-padding; 
+        }
 
-            &:not(:first-child) {
-              padding: $menu-nested-padding;
-            }
-          }
+        &:not(:first-child) {
+          padding: $menu-nested-padding;
+          display: none;
         }
       }
     }
@@ -294,8 +295,9 @@ html.is-rp-menu-open {
   }
 }
 
+
 .rp-menu {
-  &.is-handy {
+  &.is-handy-active {
     position: absolute;
     overflow: hidden;
     height: 100%;
@@ -303,6 +305,18 @@ html.is-rp-menu-open {
 
   .menu__list > li.is-active {
     color: $menu-active-type-color;
+  }
+
+  .menu--handy {
+    .menu__list.is-toggled {
+      & > li:first-child:before {
+        transform: rotateZ(-180deg);
+      }
+
+      & > li:not(:first-child) {
+        display: block;
+      }
+    }
   }
 }
 
