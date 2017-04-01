@@ -121,8 +121,8 @@ $rp-menu_burger-piece-height: 3px;
     margin: 0 auto;
 
     transition-property: opacity, transform;
-    transition-duration: 0.1s;
-    transition-timing-function: $ease-out-expo;
+    transition-duration: 0.2s;
+    transition-timing-function: $ease-in-out-expo;
   }
 
   .menu__burger {
@@ -152,7 +152,7 @@ $rp-menu_burger-piece-height: 3px;
       left: 0;
       margin-top: 0;
       
-      transition-timing-function: $ease-out-expo;
+      transition-timing-function: $ease-in-out-expo;
       transform-origin: 50% 50%;
 
       &:nth-child(1) {
@@ -167,14 +167,14 @@ $rp-menu_burger-piece-height: 3px;
         opacity: 1;
         transform: translateX(0);
         transition-property: transform opacity;
-        transition-duration: 0.1s;
+        transition-duration: 0.2s;
       }
 
       &:nth-child(1),
       &:nth-child(3) {
         transform: rotateZ(0deg);
         transition-property: transform, background-color;
-        transition-duration: 0.2s;
+        transition-duration: 0.4s;
       }
     }
   }
@@ -293,6 +293,10 @@ html.is-rp-menu-open {
   }
 
   .rp-menu {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    
     .menu__burger {
       .menu__burger-line {
         &:nth-child(2) {
@@ -319,12 +323,6 @@ html.is-rp-menu-open {
 
 
 .rp-menu {
-  &.is-handy-active {
-    position: absolute;
-    overflow: hidden;
-    height: 100%;
-  }
-
   .menu__list > li.is-active {
     color: $rp-menu_active-type-color;
   }
