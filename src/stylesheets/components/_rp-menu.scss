@@ -1,37 +1,28 @@
 /*
-NEW STRUCTURE
+  # RP (Responsive) Menu
+  
+  ## Author
+  Rob Pataki [hello@robp.io]
+  https://robp.io
+  © 2017
 
-rp-menu
-  menu menu--desktop
-    menu__header
-      menu__branding
-        menu__logo is--large
-        menu__logo is--medium
-      menu__list
-        menu__item
+  ## Objective
+  Create a reusable responsive menu component, which is easy to configure and it doesn't have a huge footprint.
 
-        menu__item is--active
-    menu__body
-      menu__list
-        menu__item is--active
-        menu__item
-
-  menu menu--handy
-    menu__header
-      menu__branding
-        menu__logo is--small
-      menu__title
-      menu__burger
-    menu__body
-      menu__list
-        menu__item
-        menu__item is-active
-        menu__list
-          menu__item
-          menu__item is-active
+  ## Styling Rules
+  1. Focus on modern browsers only (IE9+)
+  2. Use BEM naming convention, but keep it simple (*)
+  3. Use SMACCS style states (.is-active, .is-open) instead of BEM modifiers
+  4. Isolate the component styling by nesting the BEM classes under .rp-menu
+  5. Always start with the Desktop version of a block (you're developing on a PC/Mac right? It will make your life easier.)
+  6. Elements nested within blocks change when a modifier is applied to the block (to avoid unnecessary element--modifier hell). Block with modifier is like a group of elements with different 'local' styles applied to elements.
+  7. Using tag selectors and sensible nesting is not evil. There is nothing wrong with '.my-list li', or '.my-list > li > span'. By grouping our block and element styling under .rp-menu we can make sure we are not overriding anything and other styles won't affect our component either.
+  8. Don't go too deep with nesting. More than 3 levels of nesting screams for a new block or element :)
 */
 
-$menu-padding: 20px 40px;
+// Local variables
+$menu-side-padding: 40px;
+$menu-padding: 20px $menu-side-padding;
 $menu-nested-padding: 20px 60px;
 
 $menu-header-height: 90px;
@@ -45,19 +36,10 @@ $menu-active-type-color: $c-brand-yellow;
 
 $menu-border: 1px solid rgba(255, 255, 255, 0.2);
 
+$menu-burger-piece-width: 32px;
+$menu-burger-piece-height: 3px;
 
-/*
-
-  ## The Rules
-  
-  0. Use BEM, but keep it simple (*)
-  1. Always start with the Desktop version of a block (you're developing on a PC/Mac right? It will make your life easier.)
-  2. Elements nested within blocks change when a modifier is applied to the block (to avoid unnecessary element--modifier hell). Block with modifier is like a group of elements with different 'local' styles applied to elements.
-  3. Use SMACCS style 'is-something' markers to indicate state. this helps to keep a generic logic for states and reduces complexity.
-  4. Using tag selectors and sensible nesting is not all evil. There is nothing wrong with '.my-list li', or '.my-list > li > span'.
-
-*/
-
+//===================================================
 
 
 /* BLOCK */
@@ -68,106 +50,286 @@ $menu-border: 1px solid rgba(255, 255, 255, 0.2);
   user-select: none;
   cursor: default;
 
+  .menu {
+    color: $menu-type-color;
+  }
+
+  /* ELEMENT */
+  .menu__header {
+    background: $menu-header-bg-color;
+    height: $menu-header-height;
+    padding: 0 $menu-side-padding;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .menu__body {
+    background: $menu-body-bg-color;
+    padding: $menu-padding;
+    height: $menu-body-height;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .menu__list {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    list-style: none;
+    @include clearfix;
+
+    & > li {
+      display: inline-block;
+      position: relative;
+      line-height: 1;
+      float: left;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+
+  .menu__single-link {
+    padding: $menu-padding;
+    border-bottom: $menu-border;
+  }
+
+  .menu__branding {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    line-height: 0;
+  }
+
+  .menu__logo {
+    position: absolute;
+    height: 32px;
+  }
+
+  .menu__title {
+    font-size: 18px;
+    margin: 0 auto;
+
+    transition-property: opacity, transform;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+  }
+
+  .menu__burger {
+    position: absolute;
+    right: $menu-side-padding;
+    display: inline-block;
+    vertical-align: middle;
+
+    .menu__burger-button {
+      position: relative;
+      display: inline-block;
+      top: -1px;
+      width: $menu-burger-piece-width;
+      height: $menu-burger-piece-width;
+      vertical-align: middle;
+      overflow: hidden;
+    }
+
+    .menu__burger-line {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: $menu-burger-piece-width;
+      height: $menu-burger-piece-height;
+      margin: 0 auto;
+      background: $menu-type-color;
+      top: 50%;
+      left: 0;
+      margin-top: 0;
+      
+      transition-timing-function: ease-out;
+      transform-origin: 50% 50%;
+
+      &:nth-child(1) {
+        margin-top: -3 * $menu-burger-piece-height;
+      }
+
+      &:nth-child(3) {
+        margin-top: 3 * $menu-burger-piece-height;
+      }
+
+      &:nth-child(2) {
+        opacity: 1;
+        transform: translateX(0);
+        transition-property: transform opacity;
+        transition-duration: 0.1s;
+      }
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        transform: rotateZ(0deg);
+        transition-property: transform, background-color;
+        transition-duration: 0.2s;
+      }
+    }
+  }
+
+/* MODIFIER */
+  .menu--desktop {
+    .menu__logo--small {
+      display: none;
+    }  
+  }
+
+  .menu--handy {
+    display: none;
+
+    .menu__header {
+      height: $menu-header-handy-height;
+      border-bottom: $menu-border;
+    }
+
+    .menu__body {
+      position: absolute;
+      display: block;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      align-items: inherit;
+      @include touch-scroll;
+      background: $menu-header-bg-color;
+
+      // top: $mobi-menu-header-height;
+
+      // Firefox hack, might not need it
+      /* &:after {
+        display: block;
+        content: "";
+        position: relative;
+        padding-bottom: $menu-header-handy-height;
+      } */
+
+      .menu__list {
+        display: block;
+
+        & > li {
+          display: block;
+          margin-right: 0;
+          float: none;
+          line-height: 100%;
+
+          // Little arrow icon on the left from the item label
+          &:first-child {
+            cursor: pointer;
+
+            &:before {
+              position: absolute;
+              display: block;
+              content: '';
+              width: 14px;
+              height: 14px;
+              margin-top: 3px;
+              margin-left: -30px;
+              background: url('/images/arrow-down-menu.svg');
+
+              transform: rotateZ(0deg);
+              transform-origin: 50% 50%;
+              transition-property: transform;
+              transition-duration: 0.2s;
+              transition-timing-function: ease-out;
+            }
+          }
+
+          // Grouped section links
+          & > .menu__list > li {
+            border-bottom: $menu-border;
+
+            &:first-child {
+              padding: $menu-padding; 
+            }
+
+            &:not(:first-child) {
+              padding: $menu-nested-padding;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* STATES */
+html.is-rp-menu-open {
+  &, body {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .rp-menu {
+    .menu__burger {
+      .menu__burger-line {
+        &:nth-child(2) {
+          opacity: 0;
+          transform: translateX(-$menu-burger-piece-width);
+        }
+
+        &:nth-child(1) {
+          transform: rotateZ(45deg) translateY(2 * $menu-burger-piece-height) translateX(2 * $menu-burger-piece-height);
+        }
+
+        &:nth-child(3) {
+          transform: rotateZ(-45deg) translateY(-2.333 * $menu-burger-piece-height) translateX(2.333 * $menu-burger-piece-height);
+        }
+      }
+    }
+
+    .menu__title {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.rp-menu {
   &.is-handy {
     position: absolute;
     overflow: hidden;
     height: 100%;
   }
-}
 
-.menu {
-  color: $menu-type-color;
-}
-
-
-
-/* ELEMENT */
-.menu__header {
-  background: $menu-header-bg-color;
-  height: $menu-header-height;
-
-  display: flex;
-  align-items: center;
-}
-
-.menu__body {
-  background: $menu-body-bg-color;
-  padding: $menu-padding;
-  height: $menu-body-height;
-
-  display: flex;
-  align-items: center;
-}
-
-.menu__list {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  list-style: none;
-  @include clearfix;
-
-  & > li {
-    display: inline-block;
-    position: relative;
-    line-height: 1;
-    float: left;
-    cursor: pointer;
-
-    &:not(:last-child) {
-      margin-right: 24px;
-    }
-
-    &.is-active {
-      color: $menu-active-type-color;
-    }
+  .menu__list > li.is-active {
+    color: $menu-active-type-color;
   }
 }
 
-.menu__single-link {
-  padding: $menu-padding;
-  border-bottom: $menu-border;
-}
 
-
-
-/* MODIFIER */
-.menu--handy {
-  .menu__header {
-    height: $menu-header-handy-height;
-  }
-
-  .menu__body {
-    display: block;
-    height: auto;
-    padding: 0;
-    align-items: inherit;
-
-    .menu__list li {
-      margin-right: 0;
-    }
-
-    .menu__list > li > .menu__list > li {
-      border-bottom: $menu-border;
-
-      &:first-child {
-        padding: $menu-padding; 
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+  .rp-menu {
+    .menu--desktop {
+      .menu__logo--large {
+        display: none;
       }
 
-      &:not(:first-child) {
-        padding: $menu-nested-padding;
+      .menu__logo--small {
+        display: inline-block;
       }
     }
   }
+}
 
+@media screen and (max-width: 960px) {
+  .rp-menu {
+    .menu--desktop {
+      display: none;
+    }
 
-  .menu__list {
-    display: block;
-
-    & > li {
+    .menu--handy {
       display: block;
-      float: none;
-      line-height: 100%;
     }
   }
 }
