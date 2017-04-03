@@ -125,7 +125,7 @@ $rp-menu_burger-piece-height: 3px;
   }
 
   .menu__burger {
-    right: $rp-menu_side-padding;
+    position: static;
     display: inline-block;
     vertical-align: middle;
 
@@ -195,6 +195,12 @@ $rp-menu_burger-piece-height: 3px;
     .menu__header {
       height: $rp-menu_header-handy-height;
       border-bottom: $rp-menu_border;
+    }
+
+    .menu__logo--small {
+      position: relative;
+      top: auto;
+      margin-top: 0;
     }
 
     .menu__body {
