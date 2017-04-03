@@ -41,10 +41,12 @@ module.exports = function(env) {
       rules: [{
         test: /\.js$/,
         exclude: [/node_modules/],
-        use: [{
+        use: {
           loader: 'babel-loader',
-          options: { presets: ['es2015', 'stage-1'] }
-        }],
+          options: {
+            presets: ['es2015', 'stage-1']
+          }
+        },
       }]
     }
   }
