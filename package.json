@@ -82,7 +82,11 @@
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "bourbon": "^4.2.7",
+    "brewser": "^0.5.1",
+    "fastclick": "^1.0.6",
+    "gsap": "^1.19.1",
     "jquery": "3.2.0",
+    "json-loader": "^0.5.4",
     "normalize.css": "^4.0.0"
   }
 }

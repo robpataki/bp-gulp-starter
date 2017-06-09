@@ -22,17 +22,20 @@ module.exports = function(env) {
     context: jsSrc,
     plugins: [
       new webpack.ProvidePlugin({
-        '$': 'jquery',
-        'jQuery': 'jquery',
-        'window.jquery': 'jquery'
-      })
+        $: 'jquery',
+        jQuery: 'jquery',
+        FastClick: 'FastClick',
+        gsap: 'gsap',
+        _: 'lodash'
+        })
     ],
     
     resolve: {
       modules: [
         jsSrc,
         'node_modules',
-        'modules'
+        'modules',
+        'utils'
       ],
       enforceExtension: false
     },
@@ -46,6 +49,12 @@ module.exports = function(env) {
           options: {
             presets: ['es2015', 'stage-1']
           }
+        },
+      }, {
+        test: /\.json$/,
+        exclude: [/node_modules/],
+        use: {
+          loader: 'json-loader'
         },
       }]
     }
