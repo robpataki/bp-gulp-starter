@@ -29,10 +29,10 @@ $rp-menu_header-height: 90px;
 $rp-menu_header-handy-height: 70px;
 $rp-menu_body-height: 58px;
 
-$rp-menu_header-bg-color: darken($c-brand-purple, 5);
-$rp-menu_body-bg-color: $c-brand-purple;
+$rp-menu_header-bg-color: darken($col-brand-primary, 5);
+$rp-menu_body-bg-color: $col-brand-primary;
 $rp-menu_type-color: $col-white;
-$rp-menu_active-type-color: $c-brand-yellow;
+$rp-menu_active-type-color: $col-brand-tertiary;
 
 $rp-menu_border: 1px solid rgba(255, 255, 255, 0.2);
 
