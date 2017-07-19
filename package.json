@@ -85,6 +85,7 @@
     "brewser": "^0.5.1",
     "fastclick": "^1.0.6",
     "gsap": "^1.19.1",
+    "include-media": "^1.4.9",
     "jquery": "3.2.0",
     "json-loader": "^0.5.4",
     "normalize.css": "^4.0.0"

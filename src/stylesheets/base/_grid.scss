@@ -1,34 +1,38 @@
 //
-// Bootstrap grid settings
+// Grid settings
 //
 
-$grid-columns: 12;
-$grid-gutter-width-base: 30px;
+.row--content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
-$grid-gutter-widths: (
-  xs: $grid-gutter-width-base, // 30px
-  sm: $grid-gutter-width-base, // 30px
-  md: $grid-gutter-width-base, // 30px
-  lg: $grid-gutter-width-base, // 30px
-  xl: $grid-gutter-width-base  // 30px
-);
+.visible-grid {
+  .row {
+    background: rgba(0, 255, 255, 0.05);
+  }
 
-$grid-breakpoints: (
-  // Extra small screen / phone
-  xs: 0,
-  // Small screen / phone
-  sm: 576px,
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
-);
+  .col {
+    background: rgba(255, 255, 0, 0.2);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px dotted $c-brand-red;
 
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-);
+
+    .col {
+      background: rgba(0, 255, 255, 0.1);
+      border: 1px dotted $c-brand-red;
+    }
+  }
+}
+
+// Remove gutters and extra padding from the grid
+.container,
+.col {
+  @extend .no-side-padding;
+}
+.row {
+  @extend .no-gutters;
+}
+

@@ -1,0 +1,101 @@
+/*
+  COMPONENT / Typography
+*/
+%heading-base {
+  display: block;
+  font-family: $bold-font;
+  color: $col-dark-grey;
+  font-weight: 700;
+  margin-bottom: 50px;
+  @include font(40px, 45px);
+}
+
+.heading {
+  @extend %heading-base;
+
+  @include media(">=md", "<lg") {
+    @include font(30px, 40px);
+  }
+
+  @include media("<=md") {
+    @include font(24px, 30px);
+    margin-bottom: 20px;
+  }
+}
+
+.heading--large {
+  @extend %heading-base;
+  
+  margin-top: 48px;
+  @include font(66px, 60px);
+
+  @include media(">=md", "<lg") {
+    @include font(42px, 45px);
+    margin-bottom: 30px;
+    margin-top: 60px;
+  }
+
+  @include media("<md") {
+    @include font(35px, 35px);
+    margin-bottom: 30px;
+    margin-top: 45px;
+  }
+}
+
+.heading--section {
+  @extend %heading-base;
+
+  @include media("<md") {
+    @include font(24px, 30px);
+    margin-bottom: 30px;
+  }
+}
+
+.headline {
+  @include font(20px, 30px);
+  margin-bottom: 40px;
+
+  @include media("<lg") {
+    @include font(16px, 30px);
+  }
+
+  @include media(">=md", "<lg") {
+    margin-bottom: 20px;
+  }
+
+  @include media("<md") {
+    margin-bottom: 25px;
+  }
+}
+
+.subheading {
+  font-family: $bold-font;
+  color: $col-dark-grey;
+  margin-bottom: 30px;
+
+  @include font(24px, 30px);
+}
+
+.list {
+  padding-left: 18px;
+
+  span {
+    margin-left: 30px;
+  }
+
+  @include media("<lg") {
+      span {
+      margin-left: 12px;
+    }
+  }
+
+  @include media("<md") {
+      span {
+      margin-left: 0;
+    }
+  }
+}
+
+.list--purple {
+  color: $c-brand-purple;
+}

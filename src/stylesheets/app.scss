@@ -1,18 +1,24 @@
 // Vendor imports
 @import 'normalize';
 @import 'bourbon';
-@import 'bootstrap-grid';
 
 // Utils
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'utils/placeholders';
 @import 'utils/easing-placeholders';
+@import 'utils/utils';
+
+// Grid and Bootstrap settings
+@import 'base/bootstrap';
+@import 'base/grid';
 
 // Base styling
-@import 'base/grid';
 @import 'base/fonts';
+@import 'base/typography';
 @import 'base/base';
+
+@import 'base/page';
 
 // Components
 @import 'components/rp-menu';
