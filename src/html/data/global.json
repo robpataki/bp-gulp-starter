@@ -1,21 +1,35 @@
 {
-	"site_meta": {
-		"title": "UI Library",
-		"description": "A short description of your new project",
-		"base_url": "https://xxx.xxx",
+  "site_meta": {
+    "title": "UI library",
+    "description": "UI library",
+    "base_url": "https://xxx.xxx",
 
-		"facebook": {
-			"image_url": "https://xxx.xxx/xxx.jpg"
-		},
-		"twitter": {
-			"handle": "@xxx"
-		}
-		
-	},
-	"tracking": {
-		"ga": {
-			"ua": "UA-XXXXXXXX-X",
-			"domain": ".xxx.xxx"
-		}
-	}
+    "social": {
+      "facebook": {
+        "image_url": "https://xxx.xxx/xxx.jpg",
+        "page_url": "https://facebook.com/"
+      },
+      "twitter": {
+        "handle": "@handle",
+        "hashtags": [],
+        "tweet": "Chirp chirp",
+        "page_url": "https://twitter.com/"
+      },
+      "linkedin": {
+        "summary": "Hassle free team management",
+        "title": "Teamo",
+        "source": "https://xxx.xxx",
+        "page_url": "https://www.linkedin.com/"
+      },
+      "instagram": {
+        "page_url": "https://instagram.com/"
+      }
+    }
+  },
+  "tracking": {
+    "ga": {
+      "ua": "UA-XXXXXXXX-X",
+      "domain": ".xxx.xxx"
+    }
+  }
 }
