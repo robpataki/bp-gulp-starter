@@ -26,7 +26,8 @@ module.exports = function(env) {
         jQuery: 'jquery',
         FastClick: 'FastClick',
         gsap: 'gsap',
-        _: 'lodash'
+        _: 'lodash',
+        'SVG4EveryBody': 'svgsvg4everybody'
         })
     ],
     

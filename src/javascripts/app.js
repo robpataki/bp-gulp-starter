@@ -3,8 +3,10 @@
 // Vendor import
 const BREWSER = require('brewser/dist/brewser.min').br;
 
+import svg4everybody from 'SVG4EveryBody';
+
 // Module imports
-import MCP from 'modules/mcp';
+import MCP from 'mcp';
 
 import json from '../html/data/global.json';
 
@@ -27,6 +29,13 @@ window._app.start = function() {
     $('html').addClass('is-touch');
   }
 
+  if(BREWSER.browser.ie) {
+    $('html').addClass('is-ie');
+  }
+
+  // Add SVG 'use' support for old browsers and IE
+  svg4everybody();
+
   // Cache device mode on the app instance
   var deviceMode = _app.DEVICE_MODES.DESKTOP;
   if(BREWSER.device.phone) {
@@ -41,9 +50,22 @@ window._app.start = function() {
   _app.phoneDeviceMode = deviceMode === _app.DEVICE_MODES.PHONE;
   _app.tabletDeviceMode = deviceMode === _app.DEVICE_MODES.TABLET;
   _app.desktopDeviceMode = deviceMode === _app.DEVICE_MODES.DESKTOP;
+ 
+  if (BREWSER.device.ios) {
+   $('html').addClass('is-ios');
+  } else if (BREWSER.device.os.toLowerCase() === 'android') {
+    $('html').addClass('is-android');
+  }
+
+  // Prevent the user scrolling when a modal or overlay is open
+  $(window).on('touchstart', _.bind(function(){
+    if ($('html').hasClass('is-modal-open')) {
+      event.preventDefault();
+    }
+  }, this));
 
   // Initialise the MCP
-  window._app.mcp = new MCP(window._app);
+  // window._app.mcp = new MCP(window._app);
 }
 
 // On Ready

@@ -6832,6 +6832,10 @@ svg2ttf@^2.1.0:
     svgpath "^2.1.2"
     xmldom "~0.1.16"
 
+svg4everybody@^2.1.8:
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/svg4everybody/-/svg4everybody-2.1.8.tgz#c4fb648999104fc02225852f847ccfbc0b6d7586"
+
 svgicons2svgfont@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/svgicons2svgfont/-/svgicons2svgfont-5.0.0.tgz#3339521da04e1b6361aa67968d7f4f35819eeb33"
@@ -6871,6 +6875,10 @@ svgo@^0.7.0:
 svgpath@^2.1.2:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/svgpath/-/svgpath-2.2.1.tgz#0834bb67c89a76472b2bd06cc101fa7b517b222c"
+
+svgxuse@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/svgxuse/-/svgxuse-1.2.4.tgz#bb5eb73ae23c18c32288f47e6a7136e3818c548b"
 
 swap-case@^1.1.0:
   version "1.1.2"
