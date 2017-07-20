@@ -36,6 +36,7 @@ module.exports = function(env) {
         jsSrc,
         'node_modules',
         'modules',
+        'components',
         'utils'
       ],
       enforceExtension: false

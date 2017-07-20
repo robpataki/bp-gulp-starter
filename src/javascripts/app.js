@@ -65,7 +65,7 @@ window._app.start = function() {
   }, this));
 
   // Initialise the MCP
-  // window._app.mcp = new MCP(window._app);
+  window._app.mcp = new MCP(window._app);
 }
 
 // On Ready

@@ -3,6 +3,8 @@
 // Vendor imports
 import { TweenMax } from 'gsap';
 const BREWSER = require('brewser/dist/brewser.min').br;
+
+import SocialSharingButtons from 'social-sharing-buttons';
 import RPMenu from 'rp-menu';
 
 // Module imports
@@ -34,6 +36,8 @@ export default class MCP {
   _initUI() {
     // Responsive menu (only an example, will be removed)
     this.rpMenu = new RPMenu();
+
+    this.socialSharingButtons = new SocialSharingButtons(this.$socialSharingButtons);
   }
 
 

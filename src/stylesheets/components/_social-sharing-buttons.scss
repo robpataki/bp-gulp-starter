@@ -1,0 +1,63 @@
+/*
+  COMPONENT / Social sharing buttons
+*/
+.social-sharing-buttons-wrapper {
+  width: 100%;
+  text-align: center;
+}
+.social-sharing-buttons {
+  @extend %no-select;
+  @extend %inline-list;
+
+  li {
+    @extend %inline-list-item;
+
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+}
+
+.social-sharing-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  .icon {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .icon--hover {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+  }
+}
+
+
+// States
+html:not(.is-touch) {
+  .social-sharing-button {
+    @include link-hover();
+
+    .icon--hover {
+      @include link-hover;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      .icon--hover {
+        opacity: 1;
+      }
+    }
+  }
+}
