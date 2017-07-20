@@ -163,7 +163,7 @@
           
           <div class="row showroom-row">
             <div class="coll   col-32   col-md-18   mx-auto">
-              <blockquote class="blockquote">
+              <blockquote>
                 Turn any anchor tag into a video overlay trigger.
                 <br>
                 You can use these triggers to <a href="#" class="more-link more-link--secondary vo-trigger" data-vo-id="{{ videos.vimeo_test }}" data-vo-type="vimeo"><span>play a Vimeo video</span> {{ sprite('pointer-right--yellow', classes='icon') }}</a> or anything from <a href="#" class="link vo-trigger" data-vo-id="{{ videos.youtube_test }}" data-vo-type="youtube">Youtube</a>.
@@ -183,6 +183,34 @@
           <div class="row">
             <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
               <h2 class="heading">Video embed</h2>
+            </div>
+
+            <div class="coll   col-32   col-md-18   mx-auto">
+              <blockquote>
+                Video embeds are fully responsive and always take up 100% of their parent's width. The videos are fitted to 16:9 ratio, but it can be changed from CSS.
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="row showroom-row">
+            <div class="coll   col-36">
+              <div class="video-embed">
+                <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="row showroom-row">
+            <div class="coll   col-36   col-md-17 offset-md-0">
+              <div class="video-embed">
+                <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <div class="coll   col-36   col-md-17 offset-md-2">
+              <div class="video-embed">
+                <iframe src="//player.vimeo.com/video/{{ videos.vimeo_test }}?&badge=0&byline=0&title=0&loop=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </section>
