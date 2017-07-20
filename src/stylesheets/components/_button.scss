@@ -49,7 +49,7 @@
 
 
 // Only do hover states on non-touch devices
-html:not(.is-touch) {
+@include hover-state {
   .button {
     &:hover {
       color: $col-senary;
@@ -90,7 +90,7 @@ html:not(.is-touch) {
   }
 }
 
-html:not(.is-touch) {
+@include hover-state {
   .tab {
     &:hover {
       border-color: $col-primary;

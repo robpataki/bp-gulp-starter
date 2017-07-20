@@ -44,7 +44,7 @@
 
 
 // States
-html:not(.is-touch) {
+@include hover-state {
   .social-sharing-button {
     @include link-hover();
 

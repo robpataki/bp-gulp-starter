@@ -68,7 +68,7 @@ $social-link-size: 32px;
 }
 
 // States
-html:not(.is-touch) {
+@include hover-state {
   .social-link:hover {
     transform: scale(1.1);
 

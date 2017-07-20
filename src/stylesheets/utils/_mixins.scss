@@ -1,3 +1,9 @@
+@mixin hover-state {
+  html:not(.is-touch) {
+    @content;
+  }
+}
+
 @mixin font-smoothing() {
   font-weight: 400;
   font-smooth: always;

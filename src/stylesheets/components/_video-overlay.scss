@@ -73,7 +73,7 @@ html.is-video-overlay-open {
   }
 }
 
-html:not(.is-touch) {
+@include hover-state {
   .video-overlay {
     .close-screen-button:hover {
       sprite {

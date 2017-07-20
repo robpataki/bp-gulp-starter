@@ -2,24 +2,34 @@
   COMPONENT / Hero container
 */
 .hero-container {
-  height: 60vh;
+  position: relative;
+  height: 70vh;
   @extend %flex-container;
-  background: $col-quinary;
+  background: $col-tertiary;
 
   .heading--large:not(.no-override) {
     padding: 0 20px 32px 20px;
-    border-bottom: 12px solid $col-tertiary;
+    border-bottom: 12px solid $col-senary;
     margin: 0 auto;
-    color: $col-senary;
+    color: $col-septenary;
 
     @include media("<lg") {
-      border-bottom: 10px solid $col-tertiary;
+      border-width: 10px;
       padding: 0 10px 16px 10px;
     }
 
     @include media("<md") {
-      border-bottom: 6px solid $col-tertiary;
+      border-width: 10px;
       padding: 0 6px 6px 6px;
     }
+  }
+
+  .bubble {
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -21px;
+    bottom: 0;
+    margin-bottom: -21px;
   }
 }

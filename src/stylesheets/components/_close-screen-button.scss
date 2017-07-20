@@ -16,7 +16,7 @@
   }
 }
 
-html:not(.is-touch) {
+@include hover-state {
   .close-screen-button {
     .sprite {
       @include link-hover(0.3s);

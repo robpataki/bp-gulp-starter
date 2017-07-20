@@ -136,7 +136,13 @@ iframe {
   outline: none;
 }
 
-figure, p, ul, ol, blockquote {
+figure,
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre {
   margin: 0 auto 32px auto;
 }
 
@@ -152,6 +158,13 @@ blockquote {
   @include media("<md") {
     padding-left: 12px;
   }
+}
+
+code {
+  margin: 0;
+}
+pre {
+
 }
 
 figcaption {

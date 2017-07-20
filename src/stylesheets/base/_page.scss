@@ -25,7 +25,7 @@
 
     @include media("<md") {
       @include font(24px, 30px);
-      border-bottom: 6px solid $col-quinary;
+      border-width: 6px;
     }
   }
 

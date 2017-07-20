@@ -39,7 +39,7 @@
 
 
 // Only do hover states on non-touch devices
-html:not(.is-touch) {
+@include hover-state {
   .link--secondary {
     &:hover {
       color: lighten($col-tertiary, 10%);

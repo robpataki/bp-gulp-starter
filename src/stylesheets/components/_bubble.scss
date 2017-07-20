@@ -1,0 +1,37 @@
+/*
+  COMPONENT / bubble (bubble is a round button using an SVG icon)
+*/
+.bubble {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  .sprite {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.bubble--arrow-down {
+  .sprite {
+    transform: rotateZ(180deg);
+  }
+}
+
+
+// 
+@include hover-state {
+  .bubble {
+    @include link-hover;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

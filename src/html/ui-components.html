@@ -6,6 +6,9 @@
       <div class="row">
         <div class="coll">
           <h1 class="heading heading--large">UI components</h1>
+          <button class="bubble bubble--arrow-down ws-trigger" data-ws-el="page-contents">
+            {{ sprite('button-up', classes='icon') }}
+          </button>
         </div>
       </div>
     </div>
@@ -157,6 +160,33 @@
         <section class="showroom">
           <div class="row">
             <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
+              <h2 class="heading">Window scrolling</h2>
+            </div>
+          </div>
+          
+          <div class="row showroom-row">
+            <div class="coll   col-32   col-md-18   mx-auto">
+              <blockquote>
+                Turn any anchor tag into a window scrolling trigger.
+                <br>
+                Just pass in an ID or CLASS selector as a data attribute, and you're good to go!
+                <br>
+              </blockquote>
+
+              <pre><code>Attributes:  data-ws-el, data-ws-duration</code>
+<code>Class hook:  .ws-trigger</code></pre>
+
+              <a href="#" class="link ws-trigger" data-ws-el="page">Scroll to the top of the page</a>
+              <a href="#" class="link ws-trigger" data-ws-el="video-overlay-section" data-ws-duration="2">Scroll to the next section</a>
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="showroom" id="video-overlay-section">
+          <div class="row">
+            <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
               <h2 class="heading">Video overlay</h2>
             </div>
           </div>
@@ -169,8 +199,11 @@
                 You can use these triggers to <a href="#" class="more-link more-link--secondary vo-trigger" data-vo-id="{{ videos.vimeo_test }}" data-vo-type="vimeo"><span>play a Vimeo video</span> {{ sprite('pointer-right--yellow', classes='icon') }}</a> or anything from <a href="#" class="link vo-trigger" data-vo-id="{{ videos.youtube_test }}" data-vo-type="youtube">Youtube</a>.
               </blockquote>
 
+              <pre><code>Attributes:  data-vo-type, data-vo-id</code>
+<code>Class hook:  .vo-trigger</code></pre>
+
               <figure class="fade-on-hover">
-                <a href="#" class="vo-trigger" data-vo-id="{{ videos.vimeo_test }}" data-vo-type="vimeo"><img src="/images/video-preview.jpg" class="fit-width"></a>
+                <a href="#" class="vo-trigger" data-vo-id="{{ videos.vimeo_test }}" data-vo-type="vimeo"><img src="images/video-preview.jpg" class="fit-width"></a>
                 <figcaption>click the above image to trigger a video overlay</figcaption>
               </figure>
             </div>
@@ -195,7 +228,7 @@
           <div class="row showroom-row">
             <div class="coll   col-36">
               <div class="video-embed">
-                <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe>
+                <!-- <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe> -->
               </div>
             </div>
           </div>
@@ -203,13 +236,13 @@
           <div class="row showroom-row">
             <div class="coll   col-36   col-md-17 offset-md-0">
               <div class="video-embed">
-                <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe>
+                <!-- <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe> -->
               </div>
             </div>
 
             <div class="coll   col-36   col-md-17 offset-md-2">
               <div class="video-embed">
-                <iframe src="//player.vimeo.com/video/{{ videos.vimeo_test }}?&badge=0&byline=0&title=0&loop=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
+                <!-- <iframe src="//player.vimeo.com/video/{{ videos.vimeo_test }}?&badge=0&byline=0&title=0&loop=0&autoplay=0" frameborder="0" allowfullscreen></iframe> -->
               </div>
             </div>
           </div>

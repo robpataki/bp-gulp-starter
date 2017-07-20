@@ -1,15 +1,20 @@
 'use strict';
 
 // Vendor imports
-import { TweenMax } from 'gsap';
 const BREWSER = require('brewser/dist/brewser.min').br;
-
-import SocialSharingButtons from 'social-sharing-buttons';
-import VideoOverlay from 'video-overlay';
 import RPMenu from 'rp-menu';
 
-// Module imports
+// Component imports
+import SocialSharingButtons from 'social-sharing-buttons';
+import VideoOverlay from 'video-overlay';
+import WindowScroller from 'window-scroller';
+// import CookieMessage from 'cookie-message';
+// import Carousel from 'carousel-3d';
+// import SideNav from 'side-nav';
+// import SubNav from 'sub-nav';
+// import Form from 'form';
 
+// Module imports
 export default class MCP {
   constructor(app) {
     if (!app) {
@@ -19,12 +24,7 @@ export default class MCP {
 
     this.app = app;
 
-    this._initUI();
-
-    // this._resetScrollTop();
-
-    $(window).on(MCP.Events.RESIZE, _.bind(this._handleResize, this));
-    this._handleResize();
+    this._init();
   }
 
 
@@ -34,39 +34,30 @@ export default class MCP {
 ////////////////////////////////////
 /////// Private methods
 ////////////////
-  _initUI() {
+  _init() {
+    // Cookie message
+    // this.cookieMessage = new CookieMessage();
+
+    
+    // Window scroller
+    this.windowScroller = new WindowScroller();
+
+    
+    // Video overlay
+    this.videoOverlay = new VideoOverlay();
+
+
+    // Social sharing buttons
+    this.socialSharingButtons = new SocialSharingButtons(this.$socialSharingButtons);
+
+    
     // Responsive menu (only an example, will be removed)
     this.rpMenu = new RPMenu();
 
-    // Social sharing buttons
-    this.socialSharingButtons = new SocialSharingButtons();
-
-    // Video overlay
-    this.videoOverlay = new VideoOverlay();
+    
+    $(window).on(MCP.Events.RESIZE, _.bind(this._handleResize, this));
+    this._handleResize();
   }
-
-
-  _resetScrollTop() {
-    setTimeout(function(){
-      $(window).scrollTop(0);
-    }, 100);
-  }
-
-  _scrollWindowToPosition(posY = 100, duration = 2.4) {
-    var obj = {
-      y: window.pageYOffset
-    };
-
-    TweenMax.to(obj, duration, {
-      y: posY,
-      ease: Strong.easeInOut,
-      onUpdate: _.bind(function(){
-        $(window).scrollTop(obj.y);
-      }, this)
-    });
-  }
-
-
 
 
 
@@ -86,6 +77,7 @@ export default class MCP {
       this.videoOverlay.resize();
     }
 
+    // Trigger delayed resize event
     this._resizeTimeout = setTimeout(_.bind(this._handleDelayedResize, this), MCP.RESIZE_DELAY);
   }
 
