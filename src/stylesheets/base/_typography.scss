@@ -17,7 +17,7 @@
     @include font(30px, 40px);
   }
 
-  @include media("<=md") {
+  @include media("<md") {
     @include font(24px, 30px);
     margin-bottom: 20px;
   }
@@ -80,8 +80,7 @@
 
 
 .blockquote {
-  border-left: 4px solid $col-tertiary;
-  color: $col-secondary;
+  border-left: 3px solid $col-tertiary;
   font-style: italic;
   margin: 16px 0;
   padding-left: 42px;

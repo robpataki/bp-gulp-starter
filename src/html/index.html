@@ -1,15 +1,24 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-  <ul>
-    <li>
-      <a href="rp-menu.html">Responsive menu #1</a>
-    </li>
-    <li>
-      <a href="grid-examples.html">Grid examples</a>
-    </li>
-    <li>
-      <a href="typography.html">Typography</a>
-    </li>
-  </ul>  
+  <div class="page page--demo page--typography">
+    <div class="page-contents">
+      <article class="container">
+        <div class="row">
+          <div class="col   col-24 mx-auto">
+            <ul class="reset-list center">
+              <li>
+                <a class="button" href="rp-menu.html">Responsive menu #1</a>
+              </li>
+              <li>
+                <a class="button button--secondary" href="grid-examples.html">Grid examples</a>
+              </li>
+              <li>
+                <a class="button button--secondary" href="ui-styleguide.html">UI Styleguide</a>
+              </li>
+            </ul>
+          </div>      
+        </div>
+      </article>
+  </div> 
 {% endblock %}

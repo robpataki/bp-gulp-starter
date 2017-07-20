@@ -32,13 +32,16 @@ html {
 }
 
 a {
-  color: inherit;
+  color: $col-secondary;
   outline: none;
 
   @include no-tap-highlight();
+  
   &:focus,
   &:hover {
     outline: none;
+    text-decoration: none;
+    color: lighten($col-secondary, 10%);
   }
 }
 
@@ -108,6 +111,12 @@ button {
   & > * {
     cursor: pointer;
   }
+}
+
+hr {
+  border-bottom: 0;
+  border-color: $col-primary;
+  opacity: 0.1;
 }
 
 input:-webkit-autofill,

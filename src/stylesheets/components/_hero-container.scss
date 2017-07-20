@@ -1,0 +1,25 @@
+/*
+  COMPONENT / Hero container
+*/
+.hero-container {
+  height: 60vh;
+  @extend %flex-container;
+  background: $col-quinary;
+
+  .heading--large:not(.no-override) {
+    padding: 0 20px 32px 20px;
+    border-bottom: 12px solid $col-tertiary;
+    margin: 0 auto;
+    color: $col-senary;
+
+    @include media("<lg") {
+      border-bottom: 10px solid $col-tertiary;
+      padding: 0 10px 16px 10px;
+    }
+
+    @include media("<md") {
+      border-bottom: 6px solid $col-tertiary;
+      padding: 0 6px 6px 6px;
+    }
+  }
+}

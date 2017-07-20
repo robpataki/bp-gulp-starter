@@ -3,12 +3,12 @@
 {% block content %}
   <div class="page page--demo page--typography">
     <div class="hero-container">
-        <div class="row">
-          <div class="col center">
-            <h1 class="heading heading--large">UI styleguide</h1>
-          </div>
+      <div class="row">
+        <div class="col center">
+          <h1 class="heading heading--large">UI styleguide</h1>
         </div>
       </div>
+    </div>
     
     <div class="page-contents">
       <article class="container">
@@ -82,7 +82,95 @@
           </div>
         </section>
 
-        <section>
+        <hr>
+
+        <section class="showroom">
+          <div class="row">
+            <div class="col col-24 offset-6   col-lg-32 offset-lg-2   center">
+              <h2 class="heading">Links</h2>
+            </div>
+          </div>
+
+          <div class="row center showroom-row">
+            <div class="col   col-36   col-md-18">
+              <div class="row">
+                <div class="col">
+                  <h3 class="subheading">Primary link</h3>
+                </div>
+              </div>
+              
+              <div class="row showroom-row">                    
+                <div class="col">
+                  <a href="#">Find out more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col   col-36   col-md-18">
+              <div class="row">
+                <div class="col">
+                  <h3 class="subheading">Secondary link</h3>
+                </div>
+              </div>
+              
+              <div class="row showroom-row">
+                <div class="col">
+                  <a href="#" class="link link--secondary">Find out more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row center showroom-row">
+            <div class="col   col-36   col-md-18">
+              <div class="row">
+                <div class="col">
+                  <h3 class="subheading">Primary 'more' link</h3>
+                </div>
+              </div>
+              
+              <div class="row showroom-row">
+                <div class="col">
+                  <a href="#" class="more-link"><span>Read more</span> {{ sprite('pointer-right--purple', classes='icon') }}</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col   col-36   col-md-18">
+              <div class="row">
+                <div class="col">
+                  <h3 class="subheading">Secondary 'more' link</h3>
+                </div>
+              </div>
+              
+              <div class="row showroom-row">
+                <div class="col">
+                  <a href="#" class="more-link more-link--secondary"><span>Read more</span> {{ sprite('pointer-right--yellow', classes='icon') }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="showroom">
+          <div class="row">
+            <div class="col col-24 offset-6   col-lg-32 offset-lg-2   center">
+              <h2 class="heading">Icons</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-24 offset-6   col-lg-32 offset-lg-2   center">
+              {% include 'shared/components/svg-sprites.html' %}
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="showroom">
           <div class="row">
             <div class="col col-24 offset-6   col-lg-32 offset-lg-2   center">
               <h2 class="heading">Typography</h2>

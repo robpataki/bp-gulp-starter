@@ -1,65 +1,68 @@
 /*
   COMPONENT / Link
 */
-.link {
-  &,
-  &:link,
-  &:active,
-  &:visited {
-    color: $col-tertiary;
-  }
-
-  &:hover {
-    color: darken($col-tertiary, 10%);
-  }
-}
+.link {}
 
 .link--secondary {
   &,
   &:link,
   &:active,
   &:visited {
-    color: $col-secondary;
+    color: $col-tertiary;
   }
 
-  &:hover {
-    color: darken($col-secondary, 10%);
+  &:focus {
+    color: lighten($col-tertiary, 10%);
   }
 }
 
-.link--tertiary {
+.more-link {
   font-size: 14px;
-
-  &,
-  &:link,
-  &:hover,
-  &:active,
-  &:visited {
-    color: $col-tertiary;
-    font-weight: bold;
-  }
+  font-weight: 700;
+  text-decoration: none;
 
   .sprite {
     display: inline-block;
     transform: translateX(0);
-    margin-left: -8px;
-    margin-right: -5px;
+    margin-left: -5px;
   }
 }
 
+.more-link--secondary {
+  color: $col-tertiary;
+
+  &:focus {
+    color: lighten($col-tertiary, 10%);
+  }
+}
+
+
+// Only do hover states on non-touch devices
 html:not(.is-touch) {
-  .link--tertiary {
+  .link--secondary {
+    &:hover {
+      color: lighten($col-tertiary, 10%);
+    }
+  }
+
+  .more-link {
     .sprite {
       @include link-hover;
       @extend %transition-ease-out-quart;
     }
     
     &:hover {
-      text-decoration: none;
-      
+      color: $col-secondary;
+
       .sprite {
         transform: translateX(5px);
       }
+    }
+  }
+
+  .more-link--secondary {
+    &:hover {
+      color: $col-tertiary;
     }
   }
 }

@@ -9,8 +9,13 @@
   @include font(14px, 27px);
   font-family: $regular-font;
   user-select: none;
+  color: $col-senary;
   @include link-hover(0.2s);
   @extend %transition-ease-out-expo;
+
+  &:focus {
+    color: $col-senary;
+  }
 
   &.is-disabled {
     cursor: disabled;
@@ -27,7 +32,7 @@
   font-weight: 700;
 
   background: $col-primary;
-  color: $col-senary;
+  text-decoration: none;
 
   &.is-active {
     background: lighten($col-primary, 10%);
@@ -42,15 +47,19 @@
   }
 }
 
+
+// Only do hover states on non-touch devices
 html:not(.is-touch) {
   .button {
     &:hover {
+      color: $col-senary;
       background: lighten($col-primary, 10%);
     }
   }
 
   .button--secondary {
     &:hover {
+      color: $col-senary;
       background: lighten($col-tertiary, 20%);
     }
   }
