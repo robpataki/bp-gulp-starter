@@ -77,6 +77,14 @@
   @include font(24px, 30px);
 }
 
+.subtitle {
+  font-family: $semibold-font;
+  color: $col-tertiary;
+  margin-bottom: 16px;
+
+  @include font(16px, 16px);
+}
+
 
 .list {
   padding-left: 18px;
