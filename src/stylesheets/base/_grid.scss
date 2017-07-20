@@ -12,13 +12,13 @@
     background: rgba(0, 255, 255, 0.05);
   }
 
-  .col {
+  .coll {
     background: rgba(255, 255, 0, 0.2);
     background: rgba(0, 255, 255, 0.1);
     border: 1px dotted $col-quaternary;
 
 
-    .col {
+    .coll {
       background: rgba(0, 255, 255, 0.1);
       border: 1px dotted $col-quaternary;
     }
@@ -27,8 +27,12 @@
 
 // Remove gutters and extra padding from the grid
 .container,
-.col {
+.coll {
   @extend .no-side-padding;
+}
+.coll {
+  display: block;
+  width: 100%;
 }
 .row {
   @extend .no-gutters;
