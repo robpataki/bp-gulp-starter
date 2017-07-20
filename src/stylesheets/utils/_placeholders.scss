@@ -1,5 +1,13 @@
-%hitarea
-{
+%full-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+%hitarea {
   display: block;
 
   content: '';
@@ -8,5 +16,20 @@
 
   background: transparent;
 
-  @include full-screen;
+  @extend %full-screen;
+}
+
+%flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-columns {
+  flex-direction: column;
+}
+
+%flex-item {
+  flex: 0 1 auto;
+  align-self: auto;
 }

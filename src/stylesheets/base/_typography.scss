@@ -4,7 +4,7 @@
 %heading-base {
   display: block;
   font-family: $bold-font;
-  color: $col-dark-grey;
+  color: $col-quaternary;
   font-weight: 700;
   margin-bottom: 50px;
   @include font(40px, 45px);
@@ -53,6 +53,7 @@
 
 .headline {
   @include font(20px, 30px);
+  margin-top: 40px;
   margin-bottom: 40px;
 
   @include media("<lg") {
@@ -70,11 +71,30 @@
 
 .subheading {
   font-family: $bold-font;
-  color: $col-dark-grey;
+  color: $col-quaternary;
   margin-bottom: 30px;
 
   @include font(24px, 30px);
 }
+
+
+
+.blockquote {
+  border-left: 4px solid $col-tertiary;
+  color: $col-secondary;
+  font-style: italic;
+  margin: 16px 0;
+  padding-left: 42px;
+
+  @include media("<lg") {
+    padding-left: 24px;
+  }
+
+  @include media("<md") {
+    padding-left: 12px;
+  }
+}
+
 
 .list {
   padding-left: 18px;
@@ -96,6 +116,6 @@
   }
 }
 
-.list--purple {
-  color: $col-brand-primary;
+.list--highlighted {
+  color: $col-tertiary;
 }

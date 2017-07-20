@@ -9,8 +9,8 @@ html {
 
   width: 100%;
 
-  color: $col-mid-grey;
-  background-color: $col-white;
+  color: $col-quinary;
+  background-color: $col-senary;
   
   text-shadow: none;
   filter: none;
@@ -32,15 +32,12 @@ html {
 }
 
 a {
-  text-decoration: none;
-
   color: inherit;
   outline: none;
 
   @include no-tap-highlight();
   &:focus,
   &:hover {
-    text-decoration: none;
     outline: none;
   }
 }
@@ -86,38 +83,30 @@ input[type='datetime'],
 input[type='datetime-local'],
 input[type='color'] {
   font-family: inherit;
-
   padding: .5rem 1rem;
-
-  color: $col-white;
+  color: $col-primary;
   border: none;
-  border-bottom: 2px solid $col-white;
+  border-bottom: 2px solid $col-senary;
   outline: none;
   background: transparent;
   box-shadow: none;
 }
 
 button {
-  padding: .5rem 1rem;
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem 1rem;
 
-  color: $col-mid-blue;
+  color: $col-primary;
   border: none;
   background: none;
+  appearance: none;
 
   @include no-tap-highlight();
-  appearance: none;
-  @include link-hover;
   
   &,
   & > * {
     cursor: pointer;
-  }
-  
-  &:focus,
-  &:hover {
-    color: $col-white;
-    background: transparent;
-    outline: none;
   }
 }
 
@@ -135,6 +124,6 @@ input:-webkit-autofill:active {
 
 /* Text selection colour */
 ::selection {
-  color: $col-brand-primary;
-  background: $col-brand-tertiary;
+  color: $col-senary;
+  background: $col-quinary;
 }

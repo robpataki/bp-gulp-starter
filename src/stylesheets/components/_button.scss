@@ -1,0 +1,93 @@
+/*
+  COMPONENT / button
+*/
+%button-base {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  border-radius: 24px;
+  @include font(14px, 27px);
+  font-family: $regular-font;
+  user-select: none;
+  @include link-hover(0.2s);
+  @extend %transition-ease-out-expo;
+
+  &.is-disabled {
+    cursor: disabled;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+}
+
+.button {
+  @extend %button-base;
+
+  padding: 11px 24px 12px 24px;
+  min-width: 254px;
+  font-weight: 700;
+
+  background: $col-primary;
+  color: $col-senary;
+
+  &.is-active {
+    background: lighten($col-primary, 10%);
+  }
+}
+
+.button--secondary {
+  background: $col-tertiary;
+
+  &.is-active {
+    background: lighten($col-tertiary, 20%);
+  }
+}
+
+html:not(.is-touch) {
+  .button {
+    &:hover {
+      background: lighten($col-primary, 10%);
+    }
+  }
+
+  .button--secondary {
+    &:hover {
+      background: lighten($col-tertiary, 20%);
+    }
+  }
+}
+
+
+/*
+  COMPONENT / Tag
+*/
+.tab {
+  @extend %button-base;
+  text-align: left;
+  min-width: 237px;
+  padding: 9px 24px 10px 24px;
+  background: $col-senary;
+  color: $col-secondary;
+  border: 1px solid $col-secondary;
+
+  &:link,
+  &:active,
+  &:visited {
+    color: $col-secondary;
+  }
+
+  &.is-active {
+    background: $col-primary;
+    color: $col-senary;
+  }
+}
+
+html:not(.is-touch) {
+  .tab {
+    &:hover {
+      border-color: $col-primary;
+      background: $col-senary;
+      color: $col-primary;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+/*
+  COMPONENT / Link
+*/
+.link {
+  &,
+  &:link,
+  &:active,
+  &:visited {
+    color: $col-tertiary;
+  }
+
+  &:hover {
+    color: darken($col-tertiary, 10%);
+  }
+}
+
+.link--secondary {
+  &,
+  &:link,
+  &:active,
+  &:visited {
+    color: $col-secondary;
+  }
+
+  &:hover {
+    color: darken($col-secondary, 10%);
+  }
+}
+
+.link--tertiary {
+  font-size: 14px;
+
+  &,
+  &:link,
+  &:hover,
+  &:active,
+  &:visited {
+    color: $col-tertiary;
+    font-weight: bold;
+  }
+
+  .sprite {
+    display: inline-block;
+    transform: translateX(0);
+    margin-left: -8px;
+    margin-right: -5px;
+  }
+}
+
+html:not(.is-touch) {
+  .link--tertiary {
+    .sprite {
+      @include link-hover;
+      @extend %transition-ease-out-quart;
+    }
+    
+    &:hover {
+      text-decoration: none;
+      
+      .sprite {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
