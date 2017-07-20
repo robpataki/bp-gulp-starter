@@ -1,0 +1,97 @@
+/*
+  COMPONENT / Social links
+*/
+$social-link-size: 32px;
+
+.social-links-wrapper {
+  position: relative;
+  @include clearfix;
+}
+
+.social-links {
+  @extend %no-select;
+  @extend %inline-list;
+
+  li {
+    @extend %inline-list-item;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include media ("<md") {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.social-link {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transform: scale(1);
+  @include link-hover();
+
+  .icon {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    svg {
+      width: $social-link-size;
+      height: $social-link-size;
+    }
+  }
+
+  .icon--hover {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+
+    @include link-hover;
+  }
+}
+
+.social-link {
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: $social-link-size;
+}
+
+
+.social-link--facebook {
+  .icon {
+    top: 1px;
+  }
+}
+
+// States
+html:not(.is-touch) {
+  .social-link:hover {
+    transform: scale(1.1);
+
+    .icon--hover {
+      opacity: 1;
+    }
+  }
+
+  .social-link--facebook:hover {
+    background: $col-facebook-blue;
+  }
+
+  .social-link--twitter:hover {
+    background: $col-twitter-blue;
+  }
+
+  .social-link--linkedin:hover {
+    background: $col-linkedin-blue;
+  }
+
+  .social-link--instagram:hover {
+    background: $col-instagram-purple;
+  }
+}
+
+    
