@@ -160,11 +160,25 @@ blockquote {
   }
 }
 
+pre {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 24px;
+  border-top: 3px solid $col-primary;
+}
 code {
   margin: 0;
-}
-pre {
-
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  @include font(14px, 20px);
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 figcaption {

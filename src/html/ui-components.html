@@ -165,24 +165,80 @@
         <section class="showroom">
           <div class="row">
             <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
+              <h2 class="heading">Social sharing</h2>
+            </div>
+          </div>
+
+          <div class="row showroom-row">
+            <div class="coll   col-32   col-lg-18 offset-lg-4">
+              <p>Share content with pop up intents</p>
+
+              <h3 class="subtitle no-override">Files</h3>
+              <ul>
+                <li>javascripts/components/social-sharing-buttons.js</li>
+                <li>html/shared/components/social-sharing-buttons.html</li>
+                <li>stylesheets/components/social-sharing-buttons.scss</li>
+                <li>html/data/global.json</li>
+              </ul>
+
+              <h3 class="subtitle no-override">Config</h3>
+              <pre><code>The social sharing settings can be found in the global.json file, at the "social" entry.</code></pre>
+
+              <blockquote>The settings for Facebook and Twitter are used by the Twitter and Facebook meta partials to populate the appropriate meta tags in the head.</blockquote>
+
+              <h3 class="subtitle no-override">Code example</h3>
+              <pre><code>&lt;a href="#" class="button fit-width vo-trigger" data-vo-id="Vpg9yizPP_g" data-vo-type="youtube"&gt;Play Youtube&lt;/a&gt;</code><br><code>&lt;script&gt;const sharingButtons = new SocialSharingButtons();&lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="coll   col-lg-8 offset-lg-2">
+              <div class="showroom-demo">
+                <h3 class="subtitle no-override">Demo</h3>
+                <div class="center">
+                  {% include 'shared/components/social-sharing-buttons.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="showroom">
+          <div class="row">
+            <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
               <h2 class="heading">Window scrolling</h2>
             </div>
           </div>
           
           <div class="row showroom-row">
-            <div class="coll   col-32   col-md-18   mx-auto">
-              <blockquote>
-                Turn any anchor tag into a window scrolling trigger.
-                <br>
-                Just pass in an ID or CLASS selector as a data attribute, and you're good to go!
-                <br>
-              </blockquote>
+            <div class="coll   col-32   col-lg-18 offset-lg-4">
+              <p>Turn any anchor tag into a window scrolling trigger.</p>
 
-              <pre><code>Attributes:  data-ws-el, data-ws-duration</code>
-<code>Class hook:  .ws-trigger</code></pre>
+              <h3 class="subtitle no-override">Files</h3>
+              <ul>
+                <li>javascripts/components/window-scroller.js</li>
+              </ul>
 
-              <a href="#" class="link ws-trigger" data-ws-el="page">Scroll to the top of the page</a>
-              <a href="#" class="link ws-trigger" data-ws-el="video-overlay-section" data-ws-duration="2">Scroll to the next section</a>
+              <h3 class="subtitle no-override">Config</h3>
+              <pre><code>data-ws-el: CSS id or class of the element you want to scroll to</code><code>data-ws-duration: Scroll duration</code><code>Use 'ws-trigger' class to add any element to the trigger list.</code></pre>
+
+              <h3 class="subtitle no-override">Code example</h3>
+              <pre><code>&lt;a href="#" class="button fit-width ws-trigger" data-ws-el="page"&gt;Scroll to top&lt;/a&gt;</code><br><code>&lt;script&gt;const windowScroller = new WindowScroller();&lt;/script&gt;</code></pre>
+
+              <blockquote>WindowScroller is a singleton.</blockquote>
+            </div>
+
+            <div class="coll   col-lg-8 offset-lg-2">
+              <div class="showroom-demo">
+                <h3 class="subtitle no-override">Demo</h3>
+                <div class="row">
+                  <a href="#" class="button ws-trigger fit-width" data-ws-el="page"><span>Scroll to the top</span> {{ sprite('pointer-up--white', classes='icon') }}</a>
+                </div>
+                <br>
+                <div class="row">
+                  <a href="#" class="button button--secondary fit-width ws-trigger" data-ws-el="video-overlay-section" data-ws-duration="2"><span>Scroll to the next section</span> {{ sprite('pointer-down--white', classes='icon') }}</a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -197,20 +253,46 @@
           </div>
           
           <div class="row showroom-row">
-            <div class="coll   col-32   col-md-18   mx-auto">
-              <blockquote>
-                Turn any anchor tag into a video overlay trigger.
+            <div class="coll   col-32   col-lg-18 offset-lg-4">
+              <p>Turn any anchor tag into a video overlay trigger.</p>
+
+              <h3 class="subtitle no-override">Files</h3>
+              <ul>
+                <li>javascripts/components/video-overlay.js</li>
+                <li>stylesheets/components/video-overlay.scss</li>
+              </ul>
+
+              <h3 class="subtitle no-override">Config</h3>
+              <pre><code>data-vo-id: The video id (either Youtube or Vimeo)</code><code>data-vo-type: 'youtube' or 'vimeo'</code><code>Use 'vo-trigger' class to add any element to the trigger list.</code></pre>
+
+              <h3 class="subtitle no-override">Code example</h3>
+              <pre><code>&lt;a href="#" class="button fit-width vo-trigger" data-vo-id="Vpg9yizPP_g" data-vo-type="youtube"&gt;Play Youtube&lt;/a&gt;</code><br><code>&lt;script&gt;const videoOverlay = new VideoOverlay();&lt;/script&gt;</code></pre>
+
+              <blockquote>VideoOverlay is a singleton.</blockquote>
+            </div>
+
+            <div class="coll   col-lg-8 offset-lg-2">
+              <div class="showroom-demo">
+                <h3 class="subtitle no-override">Demo</h3>
+                <div class="row">
+                  <a href="#" class="button fit-width vo-trigger" data-vo-id="{{ videos.youtube_test }}" data-vo-type="youtube">Play Youtube</a>
+                </div>
+                
                 <br>
-                You can use these triggers to <a href="#" class="more-link more-link--secondary vo-trigger" data-vo-id="{{ videos.vimeo_test }}" data-vo-type="vimeo"><span>play a Vimeo video</span> {{ sprite('pointer-right--yellow', classes='icon') }}</a> or anything from <a href="#" class="link vo-trigger" data-vo-id="{{ videos.youtube_test }}" data-vo-type="youtube">Youtube</a>.
-              </blockquote>
-
-              <pre><code>Attributes:  data-vo-type, data-vo-id</code>
-<code>Class hook:  .vo-trigger</code></pre>
-
-              <figure class="fade-on-hover">
-                <a href="#" class="vo-trigger" data-vo-id="{{ videos.vimeo_test }}" data-vo-type="vimeo"><img src="images/video-preview.jpg" class="fit-width"></a>
-                <figcaption>click the above image to trigger a video overlay</figcaption>
-              </figure>
+                
+                <div class="row">
+                  <a href="#" class="button button--secondary fit-width vo-trigger" data-vo-id="{{ videos.vimeo_test }}" data-vo-type="vimeo">Play Vimeo</a>
+                </div>
+                
+                <br>
+                
+                <div class="row">
+                  <figure class="fade-on-hover">
+                    <a href="#" class="vo-trigger" data-vo-id="{{ videos.vimeo_test }}" data-vo-type="vimeo"><img src="images/video-preview.jpg" class="fit-width"></a>
+                    <figcaption>Image trigger</figcaption>
+                  </figure>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -224,16 +306,14 @@
             </div>
 
             <div class="coll   col-32   col-md-18   mx-auto">
-              <blockquote>
-                Video embeds are fully responsive and always take up 100% of their parent's width. The videos are fitted to 16:9 ratio, but it can be changed from CSS.
-              </blockquote>
+              <p>Video embeds are fully responsive and always take up 100% of their parent's width. The videos are fitted to 16:9 ratio, but it can be changed from CSS.</p>
             </div>
           </div>
 
           <div class="row showroom-row">
             <div class="coll   col-36">
               <div class="video-embed">
-                <!-- <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe> -->
+                <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -241,13 +321,13 @@
           <div class="row showroom-row">
             <div class="coll   col-36   col-md-17 offset-md-0">
               <div class="video-embed">
-                <!-- <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe> -->
+                <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
 
             <div class="coll   col-36   col-md-17 offset-md-2">
               <div class="video-embed">
-                <!-- <iframe src="//player.vimeo.com/video/{{ videos.vimeo_test }}?&badge=0&byline=0&title=0&loop=0&autoplay=0" frameborder="0" allowfullscreen></iframe> -->
+                <iframe src="//player.vimeo.com/video/{{ videos.vimeo_test }}?&badge=0&byline=0&title=0&loop=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -281,22 +361,6 @@
           <div class="row">
             <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
               {% include 'shared/components/social-links.html' %}
-            </div>
-          </div>
-        </section>
-
-        <hr>
-
-        <section class="showroom">
-          <div class="row">
-            <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
-              <h2 class="heading">Social sharing</h2>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
-              {% include 'shared/components/social-sharing-buttons.html' %}
             </div>
           </div>
         </section>

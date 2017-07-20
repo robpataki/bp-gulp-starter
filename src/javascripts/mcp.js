@@ -48,7 +48,7 @@ export default class MCP {
 
 
     // Social sharing buttons
-    this.socialSharingButtons = new SocialSharingButtons(this.$socialSharingButtons);
+    this.socialSharingButtons = new SocialSharingButtons();
 
     
     // Responsive menu (only an example, will be removed)
