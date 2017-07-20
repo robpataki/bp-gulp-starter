@@ -75,17 +75,13 @@
   min-width: 237px;
   padding: 9px 24px 10px 24px;
   background: $col-senary;
-  color: $col-secondary;
-  border: 1px solid $col-secondary;
-
-  &:link,
-  &:active,
-  &:visited {
-    color: $col-secondary;
-  }
+  color: grayscale($col-secondary);
+  border: 1px solid grayscale($col-secondary);
+  text-decoration: none;
 
   &.is-active {
     background: $col-primary;
+    border-color: $col-primary;
     color: $col-senary;
   }
 }
@@ -94,8 +90,8 @@
   .tab {
     &:hover {
       border-color: $col-primary;
-      background: $col-senary;
-      color: $col-primary;
+      background: $col-primary;
+      color: $col-senary;
       text-decoration: none;
     }
   }
