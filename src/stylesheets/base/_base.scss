@@ -131,6 +131,36 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #000;
 }
 
+iframe {
+  border: none;
+  outline: none;
+}
+
+figure, p, ul, ol, blockquote {
+  margin: 0 auto 32px auto;
+}
+
+blockquote {
+  border-left: 3px solid $col-tertiary;
+  font-style: italic;
+  padding-left: 42px;
+
+  @include media("<lg") {
+    padding-left: 24px;
+  }
+
+  @include media("<md") {
+    padding-left: 12px;
+  }
+}
+
+figcaption {
+  text-align: center;
+  margin-top: 10px;
+  @include font(14px, 20px);
+  color: $col-quaternary;
+}
+
 /* Text selection colour */
 ::selection {
   color: $col-senary;

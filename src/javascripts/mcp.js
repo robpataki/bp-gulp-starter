@@ -5,6 +5,7 @@ import { TweenMax } from 'gsap';
 const BREWSER = require('brewser/dist/brewser.min').br;
 
 import SocialSharingButtons from 'social-sharing-buttons';
+import VideoOverlay from 'video-overlay';
 import RPMenu from 'rp-menu';
 
 // Module imports
@@ -20,7 +21,7 @@ export default class MCP {
 
     this._initUI();
 
-    this._resetScrollTop();
+    // this._resetScrollTop();
 
     $(window).on(MCP.Events.RESIZE, _.bind(this._handleResize, this));
     this._handleResize();
@@ -37,7 +38,11 @@ export default class MCP {
     // Responsive menu (only an example, will be removed)
     this.rpMenu = new RPMenu();
 
-    this.socialSharingButtons = new SocialSharingButtons(this.$socialSharingButtons);
+    // Social sharing buttons
+    this.socialSharingButtons = new SocialSharingButtons();
+
+    // Video overlay
+    this.videoOverlay = new VideoOverlay();
   }
 
 
@@ -74,6 +79,11 @@ export default class MCP {
 
     if(this._resizeTimeout) {
       clearTimeout(this._resizeTimeout);        
+    }
+
+    // Resize the video overlay
+    if (this.videoOverlay) {
+      this.videoOverlay.resize();
     }
 
     this._resizeTimeout = setTimeout(_.bind(this._handleDelayedResize, this), MCP.RESIZE_DELAY);

@@ -78,23 +78,6 @@
 }
 
 
-
-.blockquote {
-  border-left: 3px solid $col-tertiary;
-  font-style: italic;
-  margin: 16px 0;
-  padding-left: 42px;
-
-  @include media("<lg") {
-    padding-left: 24px;
-  }
-
-  @include media("<md") {
-    padding-left: 12px;
-  }
-}
-
-
 .list {
   padding-left: 18px;
 

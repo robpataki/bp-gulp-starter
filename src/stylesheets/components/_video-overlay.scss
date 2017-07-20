@@ -1,0 +1,84 @@
+/*
+  COMPONENT / Video overlay
+*/
+.video-overlay {
+  @extend %full-screen;
+  position: fixed;
+
+  z-index: 100000;
+  pointer-events: auto;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .close-screen-button {
+    position: absolute;
+    right: 30px;
+  }
+
+  @include media("<md") {
+    .close-screen-button {
+      position: relative;
+      right: auto;
+      margin-top: 10px;
+    }
+  }
+}
+
+.video-overlay__background {
+  @extend %full-screen;
+  position: fixed;
+
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.video-overlay__embed-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  background: black;
+
+  iframe {
+    @extend %full-screen;
+    background: black;
+  }
+}
+
+.vo-trigger--invalid {
+  position: relative;
+
+  &:after {
+    content: "invalid trigger";
+    display: block;
+    position: absolute;
+    color: white;
+    background: red;
+    left: 0;
+    top: 100%;
+    margin-top: 2px;
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 10px;
+    z-index: 100;
+    border-radius: 8px;
+  }
+}
+
+// STATES
+html.is-video-overlay-open {
+  &, body {
+    overflow: hidden;
+  }
+}
+
+html:not(.is-touch) {
+  .video-overlay {
+    .close-screen-button:hover {
+      sprite {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

@@ -30,3 +30,19 @@
     }
   }
 }
+
+.fit-width {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+html:not(.is-touch) {
+  .fade-on-hover {
+    @include link-hover;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

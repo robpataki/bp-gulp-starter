@@ -26,6 +26,10 @@
       }
     }
   },
+  "videos": {
+    "vimeo_test": "1084537",
+    "youtube_test": "Vpg9yizPP_g"
+  },
   "tracking": {
     "ga": {
       "ua": "UA-XXXXXXXX-X",
