@@ -24,7 +24,15 @@
     }
   }
 
-  .bubble {
+  .close-screen-button {
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -30px;
+    top: 0;
+  }
+
+  .bubble--arrow-down {
     position: absolute;
     display: block;
     left: 50%;
