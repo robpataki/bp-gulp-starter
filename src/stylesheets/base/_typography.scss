@@ -55,6 +55,7 @@
   @include font(20px, 30px);
   margin-top: 40px;
   margin-bottom: 40px;
+  color: $col-primary;
 
   @include media("<lg") {
     @include font(16px, 30px);
