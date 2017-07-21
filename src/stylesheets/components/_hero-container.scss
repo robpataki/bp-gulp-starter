@@ -4,8 +4,9 @@
 .hero-container {
   position: relative;
   height: 70vh;
+  margin-bottom: $global-bottom-margin;
   @extend %flex-container;
-  background: $col-tertiary;
+  background: desaturate(complement($col-primary), 50%);
 
   .heading--large:not(.no-override) {
     padding: 0 20px 32px 20px;
@@ -40,4 +41,17 @@
     bottom: 0;
     margin-bottom: -21px;
   }
+}
+
+.hero-container--secondary {
+  background: desaturate(complement($col-secondary), 50%);
+}
+
+.hero-container--tertiary {
+  background: desaturate(complement($col-tertiary), 50%);
+}
+
+.hero-container--footer {
+  height: 40vh;
+  margin-bottom: 0;
 }

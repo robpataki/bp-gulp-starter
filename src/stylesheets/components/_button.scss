@@ -12,10 +12,8 @@
   color: $col-senary;
   @include link-hover(0.2s);
   @extend %transition-ease-out-expo;
-
-  &:focus {
-    color: $col-senary;
-  }
+  width: 100%;
+  max-width: 254px;
 
   &.is-disabled {
     cursor: disabled;
@@ -28,7 +26,6 @@
   @extend %button-base;
 
   padding: 11px 24px 12px 24px;
-  min-width: 254px;
   font-weight: 700;
 
   background: $col-primary;
@@ -41,6 +38,7 @@
   &.button--hollow {
     background: none;
     border: 1px solid $col-primary;
+    color: $col-primary;
   }
 }
 
@@ -54,6 +52,7 @@
   &.button--hollow {
     background: none;
     border: 1px solid $col-secondary;
+    color: $col-secondary;
   }
 }
 
@@ -67,19 +66,33 @@
   &.button--hollow {
     background: none;
     border: 1px solid $col-tertiary;
+    color: $col-tertiary;
+  }
+}
+
+.button--medium {
+  max-width: 100%;
+  min-width: 180px;
+  width: auto;
+  padding: 5px 24px 6px 24px;
+
+  @include media("<md") {
+    max-width: 240px;
+    // padding: 9px 16px 10px 16px;
   }
 }
 
 .button--small {
-  min-width: 0;
+  max-width: 100%;
+  min-width: 140px;
+  width: auto;
   @include font(12px, 16px);
   padding: 6px 20px 5px 20px;
-}
 
-.button--medium {
-  min-width: 0;
-  @include font(16px, 32px);
-  padding: 3px 24px 5px 24px;
+  @include media("<md") {
+    max-width: 210px;
+    padding: 9px 16px 10px 16px;
+  }
 }
 
 
@@ -126,16 +139,38 @@
 .tab {
   @extend %button-base;
   text-align: left;
-  min-width: 237px;
   padding: 9px 24px 10px 24px;
-  background: $col-senary;
-  color: grayscale($col-secondary);
-  border: 1px solid grayscale($col-secondary);
   text-decoration: none;
+  
+  background: $col-senary;
+  color: $col-primary;
+  border: 1px solid $col-primary;
 
   &.is-active {
     background: $col-primary;
     border-color: $col-primary;
+    color: $col-senary;
+  }
+}
+
+.tab--secondary {
+  color: $col-secondary;
+  border: 1px solid $col-secondary;
+
+  &.is-active {
+    background: $col-secondary;
+    border-color: $col-secondary;
+    color: $col-senary;
+  }
+}
+
+.tab--tertiary {
+  color: $col-tertiary;
+  border: 1px solid $col-tertiary;
+
+  &.is-active {
+    background: $col-tertiary;
+    border-color: $col-tertiary;
     color: $col-senary;
   }
 }
@@ -145,6 +180,24 @@
     &:hover {
       border-color: $col-primary;
       background: $col-primary;
+      color: $col-senary;
+      text-decoration: none;
+    }
+  }
+
+  .tab--secondary {
+    &:hover {
+      border-color: $col-secondary;
+      background: $col-secondary;
+      color: $col-senary;
+      text-decoration: none;
+    }
+  }
+
+  .tab--tertiary {
+    &:hover {
+      border-color: $col-tertiary;
+      background: $col-tertiary;
       color: $col-senary;
       text-decoration: none;
     }
