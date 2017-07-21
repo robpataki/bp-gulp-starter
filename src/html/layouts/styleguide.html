@@ -1,0 +1,17 @@
+{% from 'macros/helpers.html' import sprite %}
+<!doctype html>
+<html class="">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ site_meta.title }}{% endblock %}</title>
+    <meta name="description" content="{{ site_meta.description }}" />
+
+    <link rel="stylesheet" href="{{ doc_root }}/stylesheets/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    
+    {% include "shared/scripts.html" %}
+  </body>
+</html>

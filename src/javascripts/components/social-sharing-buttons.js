@@ -15,7 +15,6 @@ export default class SocialSharingButtons {
     this.$el = $('.social-sharing-buttons');
 
     if (!this.$el || !this.$el.length) {
-      console.error('[SocialSharingButtons] - constructor() - Error: `$el` is required.');
       return;
     }
 
