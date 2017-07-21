@@ -29,8 +29,8 @@ $rp-menu_header-height: 90px;
 $rp-menu_header-handy-height: 70px;
 $rp-menu_body-height: 58px;
 
-$rp-menu_header-bg-color: darken($col-primary, 5);
-$rp-menu_body-bg-color: $col-primary;
+$rp-menu_header-bg-color: darken($col-tertiary, 5%);
+$rp-menu_body-bg-color: $col-tertiary;
 $rp-menu_type-color: $col-senary;
 $rp-menu_active-type-color: $col-tertiary;
 
@@ -93,6 +93,11 @@ $rp-menu_burger-piece-height: 3px;
       &:not(:last-child) {
         margin-right: 24px;
       }
+    }
+
+    a {
+      color: $col-senary;
+      text-decoration: none;
     }
   }
 
