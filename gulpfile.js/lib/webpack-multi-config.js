@@ -27,6 +27,7 @@ module.exports = function(env) {
         FastClick: 'FastClick',
         gsap: 'gsap',
         _: 'lodash',
+        Hammer: 'hammer',
         'SVG4EveryBody': 'svgsvg4everybody'
         })
     ],
@@ -39,6 +40,13 @@ module.exports = function(env) {
         'components',
         'utils'
       ],
+      alias: {
+        'hammer': path.resolve('node_modules', 'hammerjs/hammer.js'),
+        'TweenLite': path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
+        'TweenMax': path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
+        'TimelineLite': path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
+        "TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js')
+      },
       enforceExtension: false
     },
 

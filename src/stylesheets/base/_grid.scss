@@ -38,3 +38,10 @@
   @extend .no-gutters;
 }
 
+.container {
+  @include media("<=md") {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+

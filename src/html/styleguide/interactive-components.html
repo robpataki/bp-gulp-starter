@@ -298,19 +298,46 @@
 
         <hr>
 
-        <section class="showroom" id="icons-section">
+        <section class="showroom" id="carousel-section">
           <div class="row">
             <div class="coll col-30 offset-3   col-lg-32 offset-lg-2   center">
-              <h2 class="heading">Icons</h2>
+              <h2 class="heading">Carousel </h2>
             </div>
           </div>
 
           <div class="row">
-            <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6 center">
-              {% include 'shared/components/svg-sprites.html' %}
+            <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
+              <p class="headline">This is a simple, responsive, device friendly and performant image carousel</p>
+            </div>
+          </div>
+
+          <div class="row showroom-row">
+            <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
+              <h3 class="subtitle no-override">Related files</h3>
+              <ul>
+                <li>javascripts/components/carousel.js</li>
+                <li>stylesheets/components/carousel.scss</li>
+                <li>html/shared/components/carousel.html</li>
+              </ul>
+            </div>
+
+            <div class="coll">
+              <div class="showroom-demo">
+                <div class="row">
+                  <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
+                    <h3 class="subtitle no-override no-bottom-margin">Demo</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="coll   col-md-32 offset-md-2">
+                    {% include 'shared/components/carousel.html' %}
+                  </div>
+                </div>                
+              </div>
             </div>
           </div>
         </section>
+
       </article>
     </div>
 

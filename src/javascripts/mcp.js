@@ -9,7 +9,7 @@ import SocialSharingButtons from 'social-sharing-buttons';
 import VideoOverlay from 'video-overlay';
 import WindowScroller from 'window-scroller';
 import CookieMessage from 'cookie-message';
-// import Carousel from 'carousel-3d';
+import Carousel from 'carousel';
 // import SideNav from 'side-nav';
 // import SubNav from 'sub-nav';
 // import Form from 'form';
@@ -53,6 +53,10 @@ export default class MCP {
     
     // Responsive menu (only an example, will be removed)
     this.rpMenu = new RPMenu();
+
+    
+    // Image carousel
+    this.carousel = new Carousel();
 
     
     $(window).on(MCP.Events.RESIZE, _.bind(this._handleResize, this));
