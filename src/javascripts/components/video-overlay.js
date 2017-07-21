@@ -8,6 +8,8 @@ import _ from 'lodash';
 // Module imports
 const BREWSER = require('brewser/dist/brewser.min').br;
 
+import json from '../../html/data/global.json';
+
 // Singleton innit
 var instance = null;
 
@@ -30,10 +32,11 @@ export default class VideoOverlay {
 ////////////////
 
   _init() {
-    var dom =  `<div class="video-overlay is-hidden">
+    const icon = `${json.doc_root}/images/icons.svg#x--white`;
+    const dom =  `<div class="video-overlay is-hidden">
                   <div class="close-screen-button">
                     <span class="sprite -x-white icon" aria-hidden="true">
-                      <svg viewBox="0 0 32 32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/icons.svg#x--white"></use>
+                      <svg viewBox="0 0 32 32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="${icon}"></use>
                       </svg>
                     </span>
                   </div>
