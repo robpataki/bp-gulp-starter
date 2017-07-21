@@ -11,8 +11,16 @@
   padding-right: 0 !important;
 }
 
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
 .center {
   text-align: center;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .reset-list {

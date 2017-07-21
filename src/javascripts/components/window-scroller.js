@@ -58,8 +58,6 @@ export default class WindowScroller {
       }
     }, this));
 
-    console.log('this.triggers: ', this.triggers);
-
     _.each(this.triggers, _.bind(function(trigger, index) {
       trigger.$el.on('click tap', _.bind(function(e) {
         e.preventDefault();

@@ -42,7 +42,7 @@
 
   .button,
   .tab {
-    @include media("<=md") {
+    @include media("<md") {
       width: 100%;
     }
   }

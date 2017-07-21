@@ -1,0 +1,57 @@
+/*
+  COMPONENT / Cookie message
+*/
+.cookie-message {
+  background: $col-septenary;
+  color: $col-senary;
+  font-size: 14px;
+  width: 100%;
+  z-index: 2000;
+  padding: 24px;
+
+  &.is-hidden {
+    display: none;
+    visibility: hidden;
+  }
+
+  @include media ("<lg") {
+    text-align: center;
+  }
+}
+
+.cookie-message__text,
+.cookie-message__links {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+}
+
+.cookie-message__text {
+  top: 4px;
+}
+
+.cookie-message__links {
+  float: right;
+
+  @include media ("<lg") {
+    display: block;
+    margin-top: 24px;
+    float: none;
+  }
+
+  .link {
+    margin-right: 20px;
+  }
+
+  @include media("<md") {
+    margin-top: 12px;
+
+    .link {
+      margin-right: 0;
+    }
+
+    .button {
+      margin-top: 12px;
+    }
+  }
+}

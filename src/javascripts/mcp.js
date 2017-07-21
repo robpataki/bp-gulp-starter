@@ -8,7 +8,7 @@ import RPMenu from 'rp-menu';
 import SocialSharingButtons from 'social-sharing-buttons';
 import VideoOverlay from 'video-overlay';
 import WindowScroller from 'window-scroller';
-// import CookieMessage from 'cookie-message';
+import CookieMessage from 'cookie-message';
 // import Carousel from 'carousel-3d';
 // import SideNav from 'side-nav';
 // import SubNav from 'sub-nav';
@@ -36,7 +36,7 @@ export default class MCP {
 ////////////////
   _init() {
     // Cookie message
-    // this.cookieMessage = new CookieMessage();
+    this.cookieMessage = new CookieMessage({ reset: true });
 
     
     // Window scroller
