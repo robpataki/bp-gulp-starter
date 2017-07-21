@@ -4,6 +4,7 @@
 .hero-container {
   position: relative;
   height: 70vh;
+  min-height: 400px;
   margin-bottom: $global-bottom-margin;
   @extend %flex-container;
   background: desaturate(complement($col-primary), 50%);
@@ -52,6 +53,7 @@
 }
 
 .hero-container--footer {
-  height: 40vh;
+  height: 30vh;
+  min-height: 200px;
   margin-bottom: 0;
 }
