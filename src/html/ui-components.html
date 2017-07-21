@@ -304,14 +304,16 @@
             <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
               <h2 class="heading">Video embed</h2>
             </div>
-
-            <div class="coll   col-32   col-md-18   mx-auto">
+          </div>
+          
+          <div class="row showroom-row">
+            <div class="coll   col-36   col-lg-24 offset-lg-6">
               <p>Video embeds are fully responsive and always take up 100% of their parent's width. The videos are fitted to 16:9 ratio, but it can be changed from CSS.</p>
-            </div>
-          </div>
 
-          <div class="row showroom-row">
-            <div class="coll   col-36">
+              <h3 class="subtitle no-override">Code example: Youtube <a href="https://developers.google.com/youtube/player_parameters#Parameters" target="_blank">(docs)</a></h3>
+              <pre><code>&lt;iframe src="//youtube.com/embed/Vpg9yizPP_g?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+
+              <h3 class="subtitle no-override">Demo: Youtube</h3>
               <div class="video-embed">
                 <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe>
               </div>
@@ -319,13 +321,11 @@
           </div>
 
           <div class="row showroom-row">
-            <div class="coll   col-36   col-md-17 offset-md-0">
-              <div class="video-embed">
-                <iframe src="//youtube.com/embed/{{ videos.youtube_test }}?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
+            <div class="coll   col-36   col-lg-24 offset-lg-6">
+              <h3 class="subtitle no-override">Code example: Vimeo <a href="https://developer.vimeo.com/apis/oembed" target="_blank">(docs)</a></h3>
+              <pre><code>&lt;iframe src="//youtube.com/embed/Vpg9yizPP_g?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
 
-            <div class="coll   col-36   col-md-17 offset-md-2">
+              <h3 class="subtitle no-override">Demo: Vimeo</h3>
               <div class="video-embed">
                 <iframe src="//player.vimeo.com/video/{{ videos.vimeo_test }}?&badge=0&byline=0&title=0&loop=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
               </div>
