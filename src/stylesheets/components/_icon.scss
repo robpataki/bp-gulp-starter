@@ -11,9 +11,9 @@
   svg {
     position: relative;
     display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    top: -1px;
+    width: 32px;
+    height: 32px;
+    // top: -1px;
     line-height: 100%;
     vertical-align: middle;
     fill: currentColor;
@@ -23,9 +23,64 @@
 
 .icon {
   #facebook {
-    fill: $col-twitter-blue;
+    fill: $col-facebook-blue;
   }
   #facebook--hover {
-    fill: $col-instagram-purple;
+    fill: $col-senary;
+  }
+}
+
+.icon {
+  g {
+    fill: $col-septenary;
+  }
+}
+
+// Brand colour #1
+.icon--primary {
+  g {
+    fill: $col-primary;
+  }
+}
+
+// Brand colour #2
+.icon--secondary {
+  g {
+    fill: $col-secondary;
+  }
+}
+
+// Brand colour #3
+.icon--tertiary {
+  g {
+    fill: $col-tertiary;
+  }
+}
+
+// Black
+.icon--quaternary {
+  g {
+    fill: $col-quaternary;
+  }
+}
+
+// Dark gray
+.icon--quinary {
+  g {
+    fill: $col-quinary;
+  }
+}
+
+// Light grey
+.icon--senary {
+  g {
+    fill: $col-senary;
+  }
+}
+
+// White
+.icon--septenary {
+  g {
+    fill: $col-septenary;
   }
 }
