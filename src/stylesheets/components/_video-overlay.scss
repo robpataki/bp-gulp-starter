@@ -10,6 +10,9 @@
 
   &.is-hidden {
     opacity: 0;
+    left: 100000px;
+    display: none;
+    visibility: hidden;
     pointer-events: none;
   }
 
