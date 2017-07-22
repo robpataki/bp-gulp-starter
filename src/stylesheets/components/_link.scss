@@ -50,6 +50,14 @@
   }
 }
 
+.more-link--tertiary {
+  color: $col-tertiary;
+
+  &:focus {
+    color: lighten($col-tertiary, 10%);
+  }
+}
+
 
 // Only do hover states on non-touch devices
 @include hover-state {
@@ -72,7 +80,7 @@
     }
     
     &:hover {
-      color: $col-secondary;
+      color: lighten($col-primary, 10%);
 
       .icon {
         transform: translateX(5px);
@@ -82,13 +90,13 @@
 
   .more-link--secondary {
     &:hover {
-      color: $col-secondary;
+      color: lighten($col-secondary, 10%);
     }
   }
 
   .more-link--tertiary {
     &:hover {
-      color: $col-tertiary;
+      color: lighten($col-tertiary, 10%);
     }
   }
 }
