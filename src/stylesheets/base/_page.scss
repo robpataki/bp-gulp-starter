@@ -4,6 +4,17 @@
 .page-contents {}
 
 /* 
+  PAGE / Index - Home
+*/
+.page--index {
+  .page-contents {
+    @extend %full-screen;
+    @extend %flex-container;
+    @extend %flex-columns;
+  }
+}
+
+/* 
   PAGE / Demo
 */
 .page--demo {
@@ -74,6 +85,19 @@
         margin-bottom: 30px;
       }
     }
+  }
+}
+
+/* 
+  PAGE / Demo Home
+*/
+.page--demo-index {
+  .page-contents {
+    @extend %full-screen;
+    @extend %flex-container;
+    @extend %flex-columns;
+
+    padding-top: 0;
   }
 }
 
