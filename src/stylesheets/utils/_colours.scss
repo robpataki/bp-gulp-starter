@@ -1,41 +1,67 @@
-// brand colours
+// Brand colours
 
- // theme 0
+/*
+  The idea of the colour system is the following:
+  - The first 3 (prim. - tert.) are allocated to the brand's main 
+  colours
+  - The following 4 (quat. - sept.) are for widely used 'base' colours 
+  (white, greys and black)
+  - The last 3 (oct. - den.) are allocated for input states and feedback
+
+  By simply changing the brand colours one can have a neatly customised 
+  UI including typographical elements, links, buttons, icons etc. Of 
+  course the other colours can be changed too if needed.
+
+  The application uses inline SVGs, so the UI can use icons in virtually 
+  any colour to maximise brand colour truenesness :)
+*/
+
+// Theme 2
+// https://coolors.co/40a0e0-40c8f0-40c080-f0b840-e04058
+$col-primary: #e04058; // Primary brand colour
+$col-secondary: #40c8f0; // Secondary brand colour
+$col-tertiary: #40c080; // Tertiary brand colour
+
+$col-quaternary: #000000; // Black
+$col-quinary: #393536; // Dark grey
+$col-senary: #666666; // Mid grey
+$col-septenary: #ffffff; // White
+
+$col-octonary: green; // Success green - for input success
+$col-nonary: orange; // Warning orange - for input warnings
+$col-denary: red; // Alert red - for input errors
+
+
+// Social app colours
+$col-facebook-blue: #3b5998;
+$col-twitter-blue: #55acee;
+$col-linkedin-blue: #0077b5;
+$col-instagram-purple: #6200b5;
+$col-google-plus-red: #dc4a38;
+
+
+
+/*
+  Some theme colours to play with the branding...
+*/
+
+
+// Theme 0
 /* $col-primary: #ed4c3c;
 $col-secondary: #ffc500;
 $col-tertiary: #008eeb; */
 
 
-/* theme 1
+/* Theme 1
 // https://coolors.co/75dddd-84c7d0-874996-9297c4-ff299c
 $col-primary: #874996;
 $col-secondary: #75dddd;
 $col-tertiary: #ff299c;
 */
 
-/* theme 2
+/* Theme 2
 // https://coolors.co/ed3434-380000-ff6060-2b1717-000000
 $col-primary: #2b1717;
 $col-secondary: #ff6060;
 $col-tertiary: #ed3434;
 */
-
-// theme 2
-// https://coolors.co/40a0e0-40c8f0-40c080-f0b840-e04058
-$col-primary: #e04058;
-$col-secondary: #40c8f0;
-$col-tertiary: #40c080;
-
-$col-quaternary: #393536;
-$col-quinary: #666666;
-$col-senary: #ffffff;
-$col-septenary: #000000;
-$col-octonary: #ff5733;
-$col-nonary: #c70039;
-
-// social app colours
-$col-facebook-blue: #3b5998;
-$col-twitter-blue: #55acee;
-$col-linkedin-blue: #0077b5;
-$col-instagram-purple: #6200b5;
-$col-google-plus-red: #dc4a38;

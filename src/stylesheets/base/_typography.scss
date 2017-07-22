@@ -4,7 +4,7 @@
 %heading-base {
   display: block;
   font-family: $bold-font;
-  color: $col-quaternary;
+  color: $col-quinary;
   font-weight: 700;
   margin-bottom: 50px;
   @include font(40px, 45px);
@@ -72,7 +72,7 @@
 
 .subheading {
   font-family: $bold-font;
-  color: $col-quaternary;
+  color: $col-quinary;
   margin-bottom: 30px;
 
   @include font(24px, 30px);

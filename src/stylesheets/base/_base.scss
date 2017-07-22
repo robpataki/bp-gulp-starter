@@ -9,8 +9,8 @@ html {
 
   width: 100%;
 
-  color: $col-quinary;
-  background-color: $col-senary;
+  color: $col-senary;
+  background-color: $col-septenary;
   
   text-shadow: none;
   filter: none;
@@ -89,7 +89,7 @@ input[type='color'] {
   padding: .5rem 1rem;
   color: $col-primary;
   border: none;
-  border-bottom: 2px solid $col-senary;
+  border-bottom: 2px solid $col-septenary;
   outline: none;
   background: transparent;
   box-shadow: none;
@@ -185,11 +185,11 @@ figcaption {
   text-align: center;
   margin-top: 10px;
   @include font(14px, 20px);
-  color: $col-quaternary;
+  color: $col-quinary;
 }
 
 /* Text selection colour */
 ::selection {
-  color: $col-senary;
-  background: $col-quinary;
+  color: $col-septenary;
+  background: $col-senary;
 }

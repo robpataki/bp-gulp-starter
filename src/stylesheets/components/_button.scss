@@ -9,7 +9,7 @@
   @include font(14px, 27px);
   font-family: $regular-font;
   user-select: none;
-  color: $col-senary;
+  color: $col-septenary;
   @include link-hover(0.2s);
   @extend %transition-ease-out-expo;
   width: 100%;
@@ -32,7 +32,7 @@
   text-decoration: none;
 
   &:focus {
-    color: $col-senary;
+    color: $col-septenary;
   }
 
   &.is-active {
@@ -104,7 +104,7 @@
 @include hover-state {
   .button {
     &:hover {
-      color: $col-senary;
+      color: $col-septenary;
       background: lighten($col-primary, 10%);
     }
 
@@ -115,7 +115,7 @@
 
   .button--secondary {
     &:hover {
-      color: $col-senary;
+      color: $col-septenary;
       background: lighten($col-secondary, 20%);
     }
 
@@ -126,7 +126,7 @@
 
   .button--tertiary {
     &:hover {
-      color: $col-senary;
+      color: $col-septenary;
       background: lighten($col-tertiary, 20%);
     }
 
@@ -146,14 +146,14 @@
   padding: 9px 24px 10px 24px;
   text-decoration: none;
   
-  background: $col-senary;
+  background: $col-septenary;
   color: $col-primary;
   border: 1px solid $col-primary;
 
   &.is-active {
     background: $col-primary;
     border-color: $col-primary;
-    color: $col-senary;
+    color: $col-septenary;
   }
 }
 
@@ -164,7 +164,7 @@
   &.is-active {
     background: $col-secondary;
     border-color: $col-secondary;
-    color: $col-senary;
+    color: $col-septenary;
   }
 }
 
@@ -175,7 +175,7 @@
   &.is-active {
     background: $col-tertiary;
     border-color: $col-tertiary;
-    color: $col-senary;
+    color: $col-septenary;
   }
 }
 
@@ -184,7 +184,7 @@
     &:hover {
       border-color: $col-primary;
       background: $col-primary;
-      color: $col-senary;
+      color: $col-septenary;
       text-decoration: none;
     }
   }
@@ -193,7 +193,7 @@
     &:hover {
       border-color: $col-secondary;
       background: $col-secondary;
-      color: $col-senary;
+      color: $col-septenary;
       text-decoration: none;
     }
   }
@@ -202,7 +202,7 @@
     &:hover {
       border-color: $col-tertiary;
       background: $col-tertiary;
-      color: $col-senary;
+      color: $col-septenary;
       text-decoration: none;
     }
   }

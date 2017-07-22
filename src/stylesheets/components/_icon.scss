@@ -21,7 +21,7 @@
   }
 
   g {
-    fill: $col-septenary;
+    fill: $col-quaternary;
   }
 }
 
@@ -71,6 +71,27 @@
 .icon--septenary {
   g {
     fill: $col-septenary;
+  }
+}
+
+// Success green
+.icon--octonary {
+  g {
+    fill: $col-octonary;
+  }
+}
+
+// Warning orange
+.icon--nonary {
+  g {
+    fill: $col-nonary;
+  }
+}
+
+// Error red
+.icon--denary {
+  g {
+    fill: $col-denary;
   }
 }
 

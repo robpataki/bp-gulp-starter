@@ -11,9 +11,9 @@
 
   .heading--large:not(.no-override) {
     padding: 0 20px 32px 20px;
-    border-bottom: 12px solid $col-senary;
+    border-bottom: 12px solid $col-septenary;
     margin: 0 auto;
-    color: $col-septenary;
+    color: $col-quaternary;
 
     @include media("<lg") {
       border-width: 10px;

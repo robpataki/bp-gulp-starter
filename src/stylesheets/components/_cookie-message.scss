@@ -2,8 +2,8 @@
   COMPONENT / Cookie message
 */
 .cookie-message {
-  background: $col-septenary;
-  color: $col-senary;
+  background: $col-quaternary;
+  color: $col-septenary;
   font-size: 14px;
   width: 100%;
   z-index: 2000;
@@ -44,7 +44,7 @@
   }
 
   .button--secondary.button--hollow {
-    color: $col-senary;
+    color: $col-septenary;
   }
 
   @include media("<md") {
