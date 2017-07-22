@@ -3,29 +3,36 @@
     <li>
       <a href="{{ site_meta.social.facebook.page_url }}" target="_blank" class="social-link social-link--facebook">
         <span class="icon">
-          {% include 'shared/icons/facebook.svg.html' %}  
-        </span>
-        <span class="icon icon--hover">
-          {% include 'shared/icons/facebook--hover.svg.html' %}
+          {% include "shared/icons/icon__facebook.svg.html" %}
         </span>
       </a>
     </li>
     <li>
       <a href="{{ site_meta.social.twitter.page_url }}" target="_blank" class="social-link social-link--twitter">
-        {{ sprite('twitter', classes='icon') }}
-        {{ sprite('twitter--hover', classes='icon icon--hover') }}
+        <span class="icon">
+          {% include "shared/icons/icon__twitter.svg.html" %}
+        </span>
       </a>
     </li>
     <li>
       <a href="{{ site_meta.social.linkedin.page_url }}" target="_blank" class="social-link social-link--linkedin">
-        {{ sprite('linkedin', classes='icon') }}
-        {{ sprite('linkedin--hover', classes='icon icon--hover') }}
+        <span class="icon">
+          {% include "shared/icons/icon__linkedin.svg.html" %}
+        </span>
       </a>
     </li>
     <li>
       <a href="{{ site_meta.social.instagram.page_url }}" target="_blank" class="social-link social-link--instagram">
-        {{ sprite('instagram', classes='icon') }}
-        {{ sprite('instagram--hover', classes='icon icon--hover') }}
+        <span class="icon">
+          {% include "shared/icons/icon__instagram.svg.html" %}
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="{{ site_meta.social.google-plus.page_url }}" target="_blank" class="social-link social-link--google-plus">
+        <span class="icon">
+          {% include "shared/icons/icon__google-plus.svg.html" %}
+        </span>
       </a>
     </li>
   </ul>

@@ -7,7 +7,7 @@
   padding: 0;
   border-radius: 100%;
 
-  .sprite {
+  .icon {
     width: 100%;
     height: 100%;
     display: block;
@@ -19,14 +19,6 @@
   }
 }
 
-.bubble--arrow-down {
-  .sprite {
-    transform: rotateZ(180deg);
-  }
-}
-
-
-// 
 @include hover-state {
   .bubble {
     @include link-hover;

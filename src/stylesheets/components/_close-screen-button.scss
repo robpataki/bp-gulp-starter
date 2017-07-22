@@ -10,20 +10,22 @@
   cursor: pointer;
   z-index: 1000;
 
-  .sprite svg {
-    width: 100%;
-    height: 100%;
+  .icon {
+    &, svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
 @include hover-state {
   .close-screen-button {
-    .sprite {
+    .icon {
       @include link-hover(0.3s);
     }
 
     &:hover {
-      .sprite {
+      .icon {
         opacity: 0.5;
       }
     }

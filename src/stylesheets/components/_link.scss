@@ -8,6 +8,19 @@
   &:link,
   &:active,
   &:visited {
+    color: $col-secondary;
+  }
+
+  &:focus {
+    color: lighten($col-secondary, 10%);
+  }
+}
+
+.link--tertiary {
+  &,
+  &:link,
+  &:active,
+  &:visited {
     color: $col-tertiary;
   }
 
@@ -21,7 +34,7 @@
   font-weight: 700;
   text-decoration: none;
 
-  .sprite {
+  .icon {
     display: inline-block;
     transform: translateX(0);
     margin-left: -5px;
@@ -30,10 +43,10 @@
 }
 
 .more-link--secondary {
-  color: $col-tertiary;
+  color: $col-secondary;
 
   &:focus {
-    color: lighten($col-tertiary, 10%);
+    color: lighten($col-secondary, 10%);
   }
 }
 
@@ -42,12 +55,18 @@
 @include hover-state {
   .link--secondary {
     &:hover {
+      color: lighten($col-secondary, 10%);
+    }
+  }
+
+  .link--tertiary {
+    &:hover {
       color: lighten($col-tertiary, 10%);
     }
   }
 
   .more-link {
-    .sprite {
+    .icon {
       @include link-hover;
       @extend %transition-ease-out-quart;
     }
@@ -55,13 +74,19 @@
     &:hover {
       color: $col-secondary;
 
-      .sprite {
+      .icon {
         transform: translateX(5px);
       }
     }
   }
 
   .more-link--secondary {
+    &:hover {
+      color: $col-secondary;
+    }
+  }
+
+  .more-link--tertiary {
     &:hover {
       color: $col-tertiary;
     }

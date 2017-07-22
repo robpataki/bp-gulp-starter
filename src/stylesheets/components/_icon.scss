@@ -13,24 +13,13 @@
     display: inline-block;
     width: 32px;
     height: 32px;
-    // top: -1px;
+    top: -1px;
     line-height: 100%;
     vertical-align: middle;
     fill: currentColor;
     user-select: none;
   }
-}
 
-.icon {
-  #facebook {
-    fill: $col-facebook-blue;
-  }
-  #facebook--hover {
-    fill: $col-senary;
-  }
-}
-
-.icon {
   g {
     fill: $col-septenary;
   }
@@ -83,4 +72,30 @@
   g {
     fill: $col-septenary;
   }
+}
+
+
+.icons-wrapper {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  .icon {
+    margin-bottom: 20px;
+  }
+
+  .icon:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.icons {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  padding: 32px 12px 12px 12px;
+  @include clearfix;
+}
+
+.icons--light {
+  background: rgba(0, 0, 0, 0.8);
 }

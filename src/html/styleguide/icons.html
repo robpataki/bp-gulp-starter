@@ -6,13 +6,17 @@
       <div class="row">
         <div class="coll">
           <a href="index.html" class="close-screen-button">
-            {{ sprite('x--white', classes='icon') }}
+            <span class="icon icon--senary">
+              {% include 'shared/icons/icon__cross.svg.html' %}
+            </span>
           </a>
 
           <h1 class="heading heading--large">Icons</h1>
           
           <button class="bubble bubble--arrow-down ws-trigger" data-ws-el="page-contents">
-            {{ sprite('button-up', classes='icon') }}
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__button-down.svg.html' %}
+            </span>
           </button>
         </div>
       </div>
@@ -33,7 +37,7 @@
             </div>
 
             <div class="coll col-24 offset-6 center">
-              <div class="svg-sprites-wrapper">
+              <div class="icons-wrapper">
                 
                 <div class="row showroom-row">
                   <div class="coll">
@@ -46,7 +50,7 @@
                         <h4 class="subtitle">Arrow</h4>
                       </div>
                       <div class="coll">
-                        <div class="svg-sprites">
+                        <div class="icons">
                           <span class="icon">
                             {% include "shared/icons/icon__arrow-up.svg.html" %}
                           </span>
@@ -70,7 +74,7 @@
                         <h4 class="subtitle">Pointer</h4>
                       </div>
                       <div class="coll">
-                        <div class="svg-sprites">
+                        <div class="icons">
                           <span class="icon">
                             {% include "shared/icons/icon__pointer-up.svg.html" %}
                           </span>
@@ -94,7 +98,7 @@
                         <h4 class="subtitle">Triangle</h4>
                       </div>
                       <div class="coll">
-                        <div class="svg-sprites">
+                        <div class="icons">
                           <span class="icon">
                             {% include "shared/icons/icon__triangle-up.svg.html" %}
                           </span>
@@ -118,7 +122,7 @@
                         <h4 class="subtitle">Button</h4>
                       </div>
                       <div class="coll">
-                        <div class="svg-sprites">
+                        <div class="icons">
                           <span class="icon">
                             {% include "shared/icons/icon__button-up.svg.html" %}
                           </span>
@@ -148,7 +152,7 @@
                         <h4 class="subtitle">Buttons</h4>
                       </div>
                       <div class="coll">
-                        <div class="svg-sprites">
+                        <div class="icons">
                           <span class="icon">
                             {% include "shared/icons/icon__button-facebook.svg.html" %}
                           </span>
@@ -172,7 +176,7 @@
                         <h4 class="subtitle">Active buttons</h4>
                       </div>
                       <div class="coll">
-                        <div class="svg-sprites">
+                        <div class="icons">
                           <span class="icon">
                             {% include "shared/icons/icon__button-facebook-active.svg.html" %}
                           </span>
@@ -196,7 +200,7 @@
                         <h4 class="subtitle">Simple links</h4>
                       </div>
                       <div class="coll">
-                        <div class="svg-sprites">
+                        <div class="icons">
                           <span class="icon">
                             {% include "shared/icons/icon__facebook.svg.html" %}
                           </span>
@@ -228,7 +232,7 @@
                   <div class="coll   col-md-18 offset-md-9   col-lg-14 offset-lg-11">
                     <div class="row">
                       <div class="coll">
-                        <div class="svg-sprites">
+                        <div class="icons">
                           <span class="icon">
                             {% include "shared/icons/icon__play.svg.html" %}
                           </span>
@@ -268,7 +272,7 @@
             </div>
 
             <div class="coll col-24 offset-6 center">
-              <div class="svg-sprites-wrapper">
+              <div class="icons-wrapper">
 
                 <div class="row showroom-row">
                   <div class="coll">
@@ -285,6 +289,11 @@
                         {% set icon_class = "icon icon--" + style %}
                       {% endif %}
 
+                      {% set icon_wrapper_class = "icons" %}
+                      {% if style == "senary" %}
+                        {% set icon_wrapper_class = "icons icons--light" %}
+                      {% endif %}
+
                       <div class="row">
                         <div class="coll   col-md-34 offset-md-1   col-lg-30 offset-lg-3">
                           <div class="row">
@@ -292,7 +301,7 @@
                               <h4 class="subtitle">{{ style | title }}</h4>
                             </div>
                             <div class="coll">
-                              <div class="svg-sprites">
+                              <div class="{{ icon_wrapper_class }}">
                                 <span class="{{ icon_class }}">
                                   {% include "shared/icons/icon__arrow-up.svg.html" %}
                                 </span>
@@ -357,7 +366,9 @@
       <div class="row">
         <div class="coll">          
           <button class="bubble bubble--arrow-up ws-trigger" data-ws-el="page">
-            {{ sprite('button-up', classes='icon') }}
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__button-up.svg.html' %}
+            </span>
           </button>
         </div>
       </div>

@@ -25,6 +25,9 @@
       },
       "instagram": {
         "page_url": "https://instagram.com/"
+      },
+      "google_plus": {
+        "page_url": "https://plus.google.com/"
       }
     }
   },

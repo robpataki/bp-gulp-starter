@@ -6,13 +6,17 @@
       <div class="row">
         <div class="coll center">
           <a href="index.html" class="close-screen-button">
-            {{ sprite('x--white', classes='icon') }}
+            <span class="icon icon--senary">
+              {% include 'shared/icons/icon__cross.svg.html' %}
+            </span>
           </a>
 
           <h1 class="heading heading--large">Grid examples</h1>
           
           <button class="bubble bubble--arrow-down ws-trigger" data-ws-el="page-contents">
-            {{ sprite('button-up', classes='icon') }}
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__button-down.svg.html' %}
+            </span>
           </button>
         </div>
       </div>
@@ -230,7 +234,9 @@
       <div class="row">
         <div class="coll">          
           <button class="bubble bubble--arrow-up ws-trigger" data-ws-el="page">
-            {{ sprite('button-up', classes='icon') }}
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__button-up.svg.html' %}
+            </span>
           </button>
         </div>
       </div>

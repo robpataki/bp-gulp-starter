@@ -64,16 +64,60 @@ $social-link-size: 32px;
 .social-link--facebook {
   .icon {
     top: 1px;
+
+    g {
+      fill: $col-facebook-blue;
+    }
+  }
+}
+
+.social-link--twitter {
+  .icon {
+    g {
+      fill: $col-twitter-blue;
+    }
+  }
+}
+
+.social-link--linkedin {
+  .icon {
+    g {
+      fill: $col-linkedin-blue;
+    }
+  }
+}
+
+.social-link--instagram {
+  .icon {
+    g {
+      fill: $col-instagram-purple;
+    }
+  }
+}
+
+.social-link--google-plus {
+  .icon {
+    g {
+      fill: $col-google-plus-red;
+    }
   }
 }
 
 // States
 @include hover-state {
+  .social-link {
+    .icon {
+      g {
+        @include link-hover;
+      }
+    }
+  }
+
   .social-link:hover {
     transform: scale(1.1);
 
-    .icon--hover {
-      opacity: 1;
+    g {
+      fill: $col-senary;
     }
   }
 
@@ -91,6 +135,10 @@ $social-link-size: 32px;
 
   .social-link--instagram:hover {
     background: $col-instagram-purple;
+  }
+
+  .social-link--google-plus:hover {
+    background: $col-google-plus-red;
   }
 }
 
