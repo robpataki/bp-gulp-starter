@@ -1,0 +1,31 @@
+/*
+  COMPONENT / Icon
+*/
+
+.icon {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  line-height: 2rem;
+
+  svg {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    top: -1px;
+    line-height: 100%;
+    vertical-align: middle;
+    fill: currentColor;
+    user-select: none;
+  }
+}
+
+.icon {
+  #facebook {
+    fill: $col-twitter-blue;
+  }
+  #facebook--hover {
+    fill: $col-instagram-purple;
+  }
+}

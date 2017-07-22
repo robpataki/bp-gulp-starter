@@ -1,0 +1,62 @@
+{% extends 'layouts/styleguide.html' %}
+
+{% block content %}
+  <div class="page page--demo page--inline-svg">
+    <div class="hero-container">
+      <div class="row">
+        <div class="coll">
+          <a href="index.html" class="close-screen-button">
+            {{ sprite('x--white', classes='icon') }}
+          </a>
+
+          <h1 class="heading heading--large">Inline SVG Icons</h1>
+          
+          <button class="bubble bubble--arrow-down ws-trigger" data-ws-el="page-contents">
+            {{ sprite('button-up', classes='icon') }}
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="page-contents">
+      <article class="container">
+        <section class="showroom">
+          <div class="row">
+            <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
+              <p class="headline">These icons are inline and therefore more flexible</p>
+            </div>
+
+            <div class="coll col-24 offset-6 center">
+              <div class="svg-sprites-wrapper">
+                <div>
+                  <h3 class="subheading">Social icons</h3>
+                </div>
+
+                <div class="svg-sprites">
+                  <span class="icon">
+                    {% include "shared/icons/facebook.svg.html" %}
+                  </span>
+                  <span class="icon icon--hover">
+                    {% include "shared/icons/facebook--hover.svg.html" %}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <div class="hero-container hero-container--footer">
+      <div class="row">
+        <div class="coll">          
+          <button class="bubble bubble--arrow-up ws-trigger" data-ws-el="page">
+            {{ sprite('button-up', classes='icon') }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

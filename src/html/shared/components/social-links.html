@@ -2,8 +2,12 @@
   <ul class="social-links">
     <li>
       <a href="{{ site_meta.social.facebook.page_url }}" target="_blank" class="social-link social-link--facebook">
-        {{ sprite('facebook', classes='icon') }}
-        {{ sprite('facebook--hover', classes='icon icon--hover') }}
+        <span class="icon">
+          {% include 'shared/icons/facebook.svg.html' %}  
+        </span>
+        <span class="icon icon--hover">
+          {% include 'shared/icons/facebook--hover.svg.html' %}
+        </span>
       </a>
     </li>
     <li>
