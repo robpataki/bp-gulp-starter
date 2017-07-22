@@ -69,6 +69,48 @@
 
         <hr>
 
+        <section class="showroom" id="carousel-section">
+          <div class="row">
+            <div class="coll col-30 offset-3   col-lg-32 offset-lg-2   center">
+              <h2 class="heading">Carousel </h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
+              <p class="headline">This is a simple, responsive, device friendly and performant image carousel</p>
+            </div>
+          </div>
+
+          <div class="row showroom-row">
+            <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
+              <h3 class="subtitle no-override">Related files</h3>
+              <ul>
+                <li>javascripts/components/carousel.js</li>
+                <li>stylesheets/components/carousel.scss</li>
+                <li>html/shared/components/carousel.html</li>
+              </ul>
+            </div>
+
+            <div class="coll">
+              <div class="showroom-demo">
+                <div class="row">
+                  <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
+                    <h3 class="subtitle no-override no-bottom-margin">Demo</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="coll   col-md-32 offset-md-2">
+                    {% include 'shared/components/carousel.html' %}
+                  </div>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
         <section class="showroom" id="window-scrolling-section">
           <div class="row">
             <div class="coll col-24 offset-6   col-lg-32 offset-lg-2   center">
@@ -104,7 +146,7 @@
                 <div class="row">
                   <a href="#" class="button ws-trigger fit-width" data-ws-el="page">
                     <span>Scroll to the top</span>
-                    <span class="icon icon--senary">
+                    <span class="icon icon--septenary">
                       {% include 'shared/icons/icon__triangle-up.svg.html' %}
                     </span>
                   </a>
@@ -113,7 +155,7 @@
                 <div class="row">
                   <a href="#" class="button button--secondary fit-width ws-trigger" data-ws-el="video-overlay-section" data-ws-duration="2">
                     <span>Scroll to the next section</span>
-                    <span class="icon icon--senary">
+                    <span class="icon icon--septenary">
                       {% include 'shared/icons/icon__triangle-down.svg.html' %}
                     </span>
                   </a>
@@ -198,7 +240,7 @@
 
           <div class="row showroom-row">
             <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
-              <h3 class="subtitle no-override">Code example: Youtube <a href="https://developers.google.com/youtube/player_parameters#Parameters" target="_blank">(docs)</a></h3>
+              <h3 class="subtitle no-override">Code example: Youtube <a href="https://developers.google.com/youtube/player_parameters#Parameters" target="_blank" class="link--tertiary">(docs)</a></h3>
               <pre><code>&lt;iframe src="//youtube.com/embed/Vpg9yizPP_g?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
 
               <h3 class="subtitle no-override">Demo: Youtube</h3>
@@ -210,7 +252,7 @@
 
           <div class="row showroom-row">
             <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
-              <h3 class="subtitle no-override">Code example: Vimeo <a href="https://developer.vimeo.com/apis/oembed" target="_blank">(docs)</a></h3>
+              <h3 class="subtitle no-override">Code example: Vimeo <a href="https://developer.vimeo.com/apis/oembed" target="_blank"  class="link--tertiary">(docs)</a></h3>
               <pre><code>&lt;iframe src="//youtube.com/embed/Vpg9yizPP_g?&rel=0&showinfo=0&loop=0&controls=1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
 
               <h3 class="subtitle no-override">Demo: Vimeo</h3>
@@ -303,48 +345,6 @@
                 <div class="row">
                   <div class="coll   col-30 offset-3">
                     {% include 'shared/components/cookie-message.html' %}    
-                  </div>
-                </div>                
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <hr>
-
-        <section class="showroom" id="carousel-section">
-          <div class="row">
-            <div class="coll col-30 offset-3   col-lg-32 offset-lg-2   center">
-              <h2 class="heading">Carousel </h2>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
-              <p class="headline">This is a simple, responsive, device friendly and performant image carousel</p>
-            </div>
-          </div>
-
-          <div class="row showroom-row">
-            <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
-              <h3 class="subtitle no-override">Related files</h3>
-              <ul>
-                <li>javascripts/components/carousel.js</li>
-                <li>stylesheets/components/carousel.scss</li>
-                <li>html/shared/components/carousel.html</li>
-              </ul>
-            </div>
-
-            <div class="coll">
-              <div class="showroom-demo">
-                <div class="row">
-                  <div class="coll   col-30 offset-3   col-lg-24 offset-lg-6">
-                    <h3 class="subtitle no-override no-bottom-margin">Demo</h3>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="coll   col-md-32 offset-md-2">
-                    {% include 'shared/components/carousel.html' %}
                   </div>
                 </div>                
               </div>
