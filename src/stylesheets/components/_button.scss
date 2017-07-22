@@ -31,6 +31,10 @@
   background: $col-primary;
   text-decoration: none;
 
+  &:focus {
+    color: $col-senary;
+  }
+
   &.is-active {
     background: lighten($col-primary, 10%);
   }
