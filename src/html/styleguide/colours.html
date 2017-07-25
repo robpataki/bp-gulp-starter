@@ -1,0 +1,521 @@
+{% extends 'layouts/styleguide.html' %}
+
+{% block content %}
+  <div class="page page--demo page--simple-interaction visible-grids">
+    <div class="hero-container hero-container--tertiary">
+      <div class="row">
+        <div class="coll">
+          <a href="index.html" class="close-screen-button">
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__cross.svg.html' %}
+            </span>
+          </a>
+
+          <h1 class="heading heading--large">Colour palette</h1>
+          
+          <button class="bubble bubble--arrow-down ws-trigger" data-ws-el="page-contents">
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__button-down.svg.html' %}
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="page-contents visible-grids">
+      <article class="container">
+        <section>
+          <div class="row">
+            <div class="col col-lg-29 mx-auto">
+              <div class="row">
+                <div class="col center">
+                  <p class="headline">The colour palette was designed with simplicity in mind</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col col-lg-30 mx-auto">
+                  <p>The idea of the colour system is the following:</p>  
+                  <ol>
+                    <li>The first 3 (primary-tertiary) colours represent the brand</li>
+                    <li>The next 4 (quaternary - septenary) colours are for widely used 'base' colours (white, greys and black). These are used to represent the most basic typographical hierarchy in text and background;</li>
+                    <li>The last 3 colours (octonary - denary) are allocated for input states and feedback - mostly used in forms.</li>
+                  </ol>
+                </div>
+                <!-- <div class="col col-lg-18">
+                  <p>By simply changing the brand colours one can have a neatly customised UI including typographical elements, links, buttons, icons etc. Of course the other colours can be changed too if needed.</p>
+
+                  <blockquote>The application uses inline SVGs, so the UI can use icons in virtually any colour to maximise brand colour truenesness :)</blockquote>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="showroom">
+          <div class="row">
+            <div class="col   col-md-28   col-lg-30 mx-auto   center">
+              <h2 class="heading">Brand Colours</h2>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="col   col-md-36   col-lg-30 mx-auto">
+              <div class="row">
+                
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.brand[0].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour" style="background: {{ colours.brand[0].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.brand[0].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.brand[0].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.brand[1].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour" style="background: {{ colours.brand[1].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.brand[1].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.brand[1].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.brand[2].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour" style="background: {{ colours.brand[2].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.brand[2].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.brand[2].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="showroom">
+          <div class="row">
+            <div class="col   col-md-28   col-lg-30 mx-auto   center">
+              <h2 class="heading">Base Colours</h2>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="col   col-md-36   col-lg-30 mx-auto">
+              <div class="row">
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.base[0].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour" style="background: {{ colours.base[0].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.base[0].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.base[0].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.base[1].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour" style="background: {{ colours.base[1].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.base[1].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.base[1].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.base[2].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour" style="background: {{ colours.base[2].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.base[2].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.base[2].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="col   col-md-36   col-lg-30 mx-auto">
+              <div class="row center">
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.base[3].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour colour-box__colour--light" style="background: {{ colours.base[3].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.base[3].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.base[3].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="showroom">
+          <div class="row">
+            <div class="col   col-md-28   col-lg-30 mx-auto   center">
+              <h2 class="heading">Feedback Colours</h2>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="col   col-md-36   col-lg-30 mx-auto">
+              <div class="row">
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.feedback[0].name }}</h4>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour" style="background: {{ colours.feedback[0].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.feedback[0].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.feedback[0].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.feedback[1].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour" style="background: {{ colours.feedback[1].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.feedback[1].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.feedback[1].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.feedback[2].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box">
+                        <div class="colour-box__colour" style="background: {{ colours.feedback[2].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.feedback[2].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.feedback[2].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <hr>
+
+        <section class="showroom">
+          <div class="row">
+            <div class="col   col-md-28   col-lg-30 mx-auto   center">
+              <h2 class="heading">Social Media Colours</h2>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="col   col-md-36   col-lg-30 mx-auto">
+              <div class="row">
+                
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.social[0].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box colour-box--long">
+                        <div class="colour-box__colour" style="background: {{ colours.social[0].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.social[0].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.social[0].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.social[1].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box colour-box--long">
+                        <div class="colour-box__colour" style="background: {{ colours.social[1].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.social[1].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.social[1].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.social[2].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box colour-box--long">
+                        <div class="colour-box__colour" style="background: {{ colours.social[2].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.social[2].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.social[2].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.social[3].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box colour-box--long">
+                        <div class="colour-box__colour" style="background: {{ colours.social[3].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.social[3].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.social[3].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-md-12 offset-md-0">
+                  <div class="row">
+                    <div class="col">
+                      <h4 class="subtitle">{{ colours.social[4].name }}</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div class="colour-box colour-box colour-box--long">
+                        <div class="colour-box__colour" style="background: {{ colours.social[4].col }}"></div>
+                        
+                        <div class="colour-box__text">
+                          <span class="colour-box__var">
+                            <span class="colour-box__val">{{ colours.social[4].var }}</span>
+                          </span>
+                          <span class="colour-box__hex">
+                            <span class="colour-box__val">{{ colours.social[4].col }}</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </article>
+    </div>
+
+     <div class="hero-container hero-container--tertiary hero-container--footer">
+      <div class="row">
+        <div class="col">          
+          <button class="bubble bubble--arrow-up ws-trigger" data-ws-el="page">
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__button-up.svg.html' %}
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

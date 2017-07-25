@@ -66,7 +66,7 @@ $social-link-size: 32px;
     top: 1px;
 
     g {
-      fill: $col-facebook-blue;
+      fill: $col-social-facebook-blue;
     }
   }
 }
@@ -74,7 +74,7 @@ $social-link-size: 32px;
 .social-link--twitter {
   .icon {
     g {
-      fill: $col-twitter-blue;
+      fill: $col-social-twitter-blue;
     }
   }
 }
@@ -82,7 +82,7 @@ $social-link-size: 32px;
 .social-link--linkedin {
   .icon {
     g {
-      fill: $col-linkedin-blue;
+      fill: $col-social-linkedin-blue;
     }
   }
 }
@@ -90,7 +90,7 @@ $social-link-size: 32px;
 .social-link--instagram {
   .icon {
     g {
-      fill: $col-instagram-purple;
+      fill: $col-social-instagram-purple;
     }
   }
 }
@@ -98,7 +98,7 @@ $social-link-size: 32px;
 .social-link--google-plus {
   .icon {
     g {
-      fill: $col-google-plus-red;
+      fill: $col-social-google-plus-red;
     }
   }
 }
@@ -122,23 +122,23 @@ $social-link-size: 32px;
   }
 
   .social-link--facebook:hover {
-    background: $col-facebook-blue;
+    background: $col-social-facebook-blue;
   }
 
   .social-link--twitter:hover {
-    background: $col-twitter-blue;
+    background: $col-social-twitter-blue;
   }
 
   .social-link--linkedin:hover {
-    background: $col-linkedin-blue;
+    background: $col-social-linkedin-blue;
   }
 
   .social-link--instagram:hover {
-    background: $col-instagram-purple;
+    background: $col-social-instagram-purple;
   }
 
   .social-link--google-plus:hover {
-    background: $col-google-plus-red;
+    background: $col-social-google-plus-red;
   }
 }
 

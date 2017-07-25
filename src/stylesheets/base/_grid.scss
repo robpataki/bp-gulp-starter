@@ -28,14 +28,14 @@
 // Remove gutters and extra padding from the grid
 .container,
 .coll {
-  @extend .no-side-padding;
+  // @extend .no-side-padding;
 }
 .coll {
   display: block;
   width: 100%;
 }
 .row {
-  @extend .no-gutters;
+  // @extend .no-gutters;
 }
 
 .container {
