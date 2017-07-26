@@ -1,0 +1,58 @@
+/*
+  COMPONENT / More link
+*/
+.more-link {
+  @include font(14px, 24px);
+  font-weight: 700;
+  text-decoration: none;
+  @extend .more-link--primary;
+
+  .icon {
+    display: inline-block;
+    transform: translateX(0);
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}
+
+
+/*
+  * Generate more link classes using the ordered latin list
+*/
+@each $item in $order {
+  $colour-name: map-get($colours, $item);
+
+  .more-link--#{$item} {
+    color: $colour-name;
+
+    .icon {
+      @include link-hover;
+      @extend %transition-ease-out-quart;
+
+      g {
+        fill: $colour-name;
+      }
+    }
+
+    &:focus {
+      color: lighten($colour-name, 10%);
+    }
+  }
+
+  // Generate button hover states on non-touch devices
+  @include hover-state {
+    .more-link--#{$item} {
+      &:hover {
+        color: lighten($colour-name, 10%);
+
+        .icon {
+          transform: translateX(5px);
+
+          g {
+            fill: lighten($colour-name, 10%);
+          }
+        }
+      }
+    }
+  }
+}

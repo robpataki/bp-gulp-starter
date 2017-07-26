@@ -129,12 +129,11 @@
   @include hover-state {
     .tab--#{$item} {
       &:hover {
-      border-color: $colour-name;
-      background: $colour-name;
-      color: $col-septenary; // Always white
-      text-decoration: none;
-    }
+        border-color: $colour-name;
+        background: $colour-name;
+        color: $col-septenary; // Always white
+        text-decoration: none;
+      }
     }
   }
 }
-

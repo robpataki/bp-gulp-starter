@@ -25,73 +25,17 @@
   }
 }
 
-// Brand colour #1
-.icon--primary {
-  g {
-    fill: $col-primary;
-  }
-}
 
-// Brand colour #2
-.icon--secondary {
-  g {
-    fill: $col-secondary;
-  }
-}
+/*
+  * Generate icon classes using the ordered latin list
+*/
+@each $item in $order {
+  $colour-name: map-get($colours, $item);
 
-// Brand colour #3
-.icon--tertiary {
-  g {
-    fill: $col-tertiary;
-  }
-}
-
-// Black
-.icon--quaternary {
-  g {
-    fill: $col-quaternary;
-  }
-}
-
-// Dark gray
-.icon--quinary {
-  g {
-    fill: $col-quinary;
-  }
-}
-
-// Light grey
-.icon--senary {
-  g {
-    fill: $col-senary;
-  }
-}
-
-// White
-.icon--septenary {
-  g {
-    fill: $col-septenary;
-  }
-}
-
-// Success green
-.icon--octonary {
-  g {
-    fill: $col-octonary;
-  }
-}
-
-// Warning orange
-.icon--nonary {
-  g {
-    fill: $col-nonary;
-  }
-}
-
-// Error red
-.icon--denary {
-  g {
-    fill: $col-denary;
+  .icon--#{$item} {
+    g {
+      fill: $colour-name;
+    }
   }
 }
 
