@@ -32,12 +32,11 @@ export default class VideoOverlay {
 ////////////////
 
   _init() {
-    const icon = `${json.doc_root}/images/icons.svg#x--white`;
+    const icon = `${json.doc_root}/images/icon__x-white.svg`;
     const dom =  `<div class="video-overlay is-hidden">
                   <div class="close-screen-button">
                     <span class="sprite -x-white icon" aria-hidden="true">
-                      <svg viewBox="0 0 32 32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="${icon}"></use>
-                      </svg>
+                      <img src="${icon}" width="60" height="60"/>
                     </span>
                   </div>
                   <div class="video-overlay__background"></div>
