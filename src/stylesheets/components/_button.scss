@@ -31,47 +31,7 @@
   background: $col-primary;
   text-decoration: none;
 
-  &:focus {
-    color: $col-septenary;
-  }
-
-  &.is-active {
-    background: lighten($col-primary, 10%);
-  }
-
-  &.button--hollow {
-    background: none;
-    border: 1px solid $col-primary;
-    color: $col-primary;
-  }
-}
-
-.button--secondary {
-  background: $col-secondary;
-
-  &.is-active {
-    background: lighten($col-secondary, 20%);
-  }
-
-  &.button--hollow {
-    background: none;
-    border: 1px solid $col-secondary;
-    color: $col-secondary;
-  }
-}
-
-.button--tertiary {
-  background: $col-tertiary;
-
-  &.is-active {
-    background: lighten($col-tertiary, 20%);
-  }
-
-  &.button--hollow {
-    background: none;
-    border: 1px solid $col-tertiary;
-    color: $col-tertiary;
-  }
+  @extend .button--primary;
 }
 
 .button--medium {
@@ -82,7 +42,6 @@
 
   @include media("<md") {
     max-width: 240px;
-    // padding: 9px 16px 10px 16px;
   }
 }
 
@@ -99,42 +58,41 @@
   }
 }
 
+/*
+  * Generate button classes using the ordered latin list
+*/
+@each $item in $order {
+  $colour-name: map-get($colours, $item);
 
-// Only do hover states on non-touch devices
-@include hover-state {
-  .button {
-    &:hover {
-      color: $col-septenary;
-      background: lighten($col-primary, 10%);
+  .button--#{$item} {
+    background: $colour-name;
+
+    &.is-active {
+      background: lighten($colour-name, 20%);
     }
 
-    &.button--hollow:hover {
-      background: $col-primary;
-    }
-  }
-
-  .button--secondary {
-    &:hover {
-      color: $col-septenary;
-      background: lighten($col-secondary, 20%);
-    }
-
-    &.button--hollow:hover {
-      background: $col-secondary;
+    &.button--hollow {
+      background: none;
+      border: 1px solid $colour-name;
+      color: $colour-name;
     }
   }
 
-  .button--tertiary {
-    &:hover {
-      color: $col-septenary;
-      background: lighten($col-tertiary, 20%);
-    }
+  // Generate button hover states on non-touch devices
+  @include hover-state {
+    .button--#{$item} {
+      &:hover {
+        color: $col-septenary; // Always white
+        background: darken($colour-name, 10%);
+      }
 
-    &.button--hollow:hover {
-      background: $col-tertiary;
+      &.button--hollow:hover {
+        background: $colour-name;
+      }
     }
   }
 }
+
 
 
 /*
@@ -146,64 +104,37 @@
   padding: 9px 24px 10px 24px;
   text-decoration: none;
   
-  background: $col-septenary;
-  color: $col-primary;
-  border: 1px solid $col-primary;
-
-  &.is-active {
-    background: $col-primary;
-    border-color: $col-primary;
-    color: $col-septenary;
-  }
+  @extend .tab--primary;
 }
 
-.tab--secondary {
-  color: $col-secondary;
-  border: 1px solid $col-secondary;
+/*
+  * Generate tab classes using the ordered latin list
+*/
+@each $item in $order {
+  $colour-name: map-get($colours, $item);
 
-  &.is-active {
-    background: $col-secondary;
-    border-color: $col-secondary;
-    color: $col-septenary;
-  }
-}
+  .tab--#{$item} {
+    background: $col-septenary; // Always white
+    color: $colour-name;
+    border: 1px solid $colour-name;
 
-.tab--tertiary {
-  color: $col-tertiary;
-  border: 1px solid $col-tertiary;
-
-  &.is-active {
-    background: $col-tertiary;
-    border-color: $col-tertiary;
-    color: $col-septenary;
-  }
-}
-
-@include hover-state {
-  .tab {
-    &:hover {
-      border-color: $col-primary;
-      background: $col-primary;
-      color: $col-septenary;
-      text-decoration: none;
+    &.is-active {
+      background: $colour-name;
+      border-color: $colour-name;
+      color: $col-septenary; // Always white
     }
   }
 
-  .tab--secondary {
-    &:hover {
-      border-color: $col-secondary;
-      background: $col-secondary;
-      color: $col-septenary;
+  // Generate button hover states on non-touch devices
+  @include hover-state {
+    .tab--#{$item} {
+      &:hover {
+      border-color: $colour-name;
+      background: $colour-name;
+      color: $col-septenary; // Always white
       text-decoration: none;
     }
-  }
-
-  .tab--tertiary {
-    &:hover {
-      border-color: $col-tertiary;
-      background: $col-tertiary;
-      color: $col-septenary;
-      text-decoration: none;
     }
   }
 }
+

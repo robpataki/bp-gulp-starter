@@ -27,9 +27,9 @@ $col-quinary: #393536; // Dark grey
 $col-senary: #666666; // Mid grey
 $col-septenary: #ffffff; // White
 
-$col-octonary: green; // Success green - for input success
-$col-nonary: orange; // Warning orange - for input warnings
-$col-denary: red; // Alert red - for input errors
+$col-octonary: #268477; // Success green - for input success
+$col-nonary: #edcb55; // Warning orange - for input warnings
+$col-denary: #de542f; // Alert red - for input errors
 
 
 // Social app colours
@@ -38,6 +38,20 @@ $col-social-twitter-blue: #55acee;
 $col-social-linkedin-blue: #0077b5;
 $col-social-instagram-purple: #6200b5;
 $col-social-google-plus-red: #dc4a38;
+
+// Mappable list of colours
+$colours: (
+  primary: $col-primary,
+  secondary: $col-secondary,
+  tertiary: $col-tertiary,
+  quaternary: $col-quaternary,
+  quinary: $col-quinary,
+  senary: $col-senary,
+  septenary: $col-septenary,
+  octonary: $col-octonary,
+  nonary: $col-nonary,
+  denary: $col-denary
+);
 
 
 /*
