@@ -90,6 +90,9 @@
 
   @include font(16px, 16px);
 }
+.subtitle--sub {
+  color: $col-quinary;
+}
 
 
 .list {
