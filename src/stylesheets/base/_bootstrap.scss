@@ -6,7 +6,12 @@ $breakpoints: $grid-breakpoints;
 
 @import "mixins/clearfix";
 @import 'mixins/breakpoints';
+@import 'mixins/text-truncate';
+@import 'mixins/text-emphasis';
+@import 'mixins/text-hide';
+@import 'mixins/hover';
 
 @import 'utilities/spacing';
 @import 'utilities/flex';
+@import 'utilities/text';
 @import 'bootstrap-grid';
