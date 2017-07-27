@@ -2,25 +2,7 @@
 
 {% block content %}
   <div class="page page--demo page--simple-interaction">
-    <div class="hero-container hero-container--senary">
-      <div class="row">
-        <div class="coll">
-          <a href="index.html" class="close-screen-button">
-            <span class="icon icon--quaternary">
-              {% include 'shared/icons/icon__cross.svg.html' %}
-            </span>
-          </a>
-
-          <h1 class="heading heading--large">Forms</h1>
-          
-          <button class="bubble bubble--arrow-down ws-trigger" data-ws-el="page-contents">
-            <span class="icon icon--quaternary">
-              {% include 'shared/icons/icon__button-down.svg.html' %}
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
+    {{ heroContainer("senary", "Forms") }}
     
     <div class="page-contents visible-grids">
       <article class="container">
@@ -238,17 +220,7 @@
       </article>
     </div>
 
-     <div class="hero-container hero-container--senary hero-container--footer">
-      <div class="row">
-        <div class="col">          
-          <button class="bubble bubble--arrow-up ws-trigger" data-ws-el="page">
-            <span class="icon icon--quaternary">
-              {% include 'shared/icons/icon__button-up.svg.html' %}
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
+    {{ heroContainerFooter("senary") }}
 
   </div>
 {% endblock %}

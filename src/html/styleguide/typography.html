@@ -2,25 +2,7 @@
 
 {% block content %}
   <div class="page page--demo page--typography">
-    <div class="hero-container hero-container--secondary">
-      <div class="row">
-        <div class="coll">
-          <a href="index.html" class="close-screen-button">
-            <span class="icon icon--quaternary">
-              {% include 'shared/icons/icon__cross.svg.html' %}
-            </span>
-          </a>
-
-          <h1 class="heading heading--large">Typography</h1>
-          
-          <button class="bubble bubble--arrow-down ws-trigger" data-ws-el="page-contents">
-            <span class="icon icon--quaternary">
-              {% include 'shared/icons/icon__button-down.svg.html' %}
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
+    {{ heroContainer("secondary", "Typography") }}
     
     <div class="page-contents">
       <article class="container">
@@ -95,17 +77,7 @@
       </article>
     </div>
 
-    <div class="hero-container hero-container--secondary hero-container--footer">
-      <div class="row">
-        <div class="coll">          
-          <button class="bubble bubble--arrow-up ws-trigger" data-ws-el="page">
-            <span class="icon icon--quaternary">
-              {% include 'shared/icons/icon__button-up.svg.html' %}
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
+    {{ heroContainerFooter("secondary") }}
 
   </div>
 {% endblock %}
