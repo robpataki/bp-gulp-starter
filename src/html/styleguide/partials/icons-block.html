@@ -1,10 +1,13 @@
-<div class="row">
-  <div class="coll   col-md-34 offset-md-1   col-lg-30 offset-lg-3">
+<div class="row showroom-row">
+  <div class="col col-no-sidepadding  col-md-34 offset-md-1   col-lg-30 offset-lg-3">
     <div class="row">
-      <div class="coll">
+      <div class="col">
         <h4 class="subtitle">{{ style | title }}</h4>
       </div>
-      <div class="coll">
+    </div>
+    
+    <div class="row showroom-row">
+      <div class="col">
         <div class="{{ icon_wrapper_class }}">
           <span class="{{ icon_class }}">
             {% include "shared/icons/icon__arrow-up.svg.html" %}
@@ -49,6 +52,13 @@
             {% include "shared/icons/icon__google-plus.svg.html" %}
           </span>
         </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h4 class="subtitle subtitle--sub no-override">Code example</h4>
+        <pre><code>&lt;span class="{{ icon_class }}"&gt;<br>  &#123;% include "shared/icons/icon__expand.svg.html" %&#125;<br>&lt;/span&gt;</code></pre>
       </div>
     </div>
   </div>

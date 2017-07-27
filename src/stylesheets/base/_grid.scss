@@ -12,13 +12,13 @@
     background: rgba(0, 255, 255, 0.05);
   }
 
-  .coll, .col {
+  .coll, .col, .col-no-gutter {
     background: rgba(255, 255, 0, 0.2);
     background: rgba(0, 255, 255, 0.1);
     border: 1px dotted $col-quinary;
 
 
-    .coll, .col {
+    .coll, .col, .col-no-gutter {
       background: rgba(0, 255, 255, 0.1);
       border: 1px dotted $col-quinary;
     }
@@ -26,16 +26,17 @@
 }
 
 // Remove gutters and extra padding from the grid
-.container,
-.coll {
-  // @extend .no-side-padding;
-}
+
 .coll {
   display: block;
   width: 100%;
 }
-.row {
-  // @extend .no-gutters;
+
+.col--no-gutter {
+  display: block;
+  width: 100%;
+  @extend .no-gutters;
+  // @extend .no-side-padding;
 }
 
 .container {
