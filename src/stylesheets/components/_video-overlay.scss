@@ -19,6 +19,7 @@
   .close-screen-button {
     position: absolute;
     right: 30px;
+    z-index: 1000;
   }
 
   @include media("<md") {

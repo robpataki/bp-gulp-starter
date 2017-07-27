@@ -32,7 +32,7 @@
     padding: 0 10px 10px 10px;
     color: $col-quinary;
     border-bottom: 12px solid $col-senary;
-    margin-bottom: 90px;
+    margin-bottom: 30px;
 
     @include media("<md") {
       @include font(24px, 30px);
@@ -77,11 +77,16 @@
       }
     }
 
-    .showroom-demo {
-      // margin-top: 42px;
+    .push-down {
+      margin-top: 50px;
 
+      @include media("<md") {
+        margin-top: 0;
+      }
+    }
+
+    .showroom-demo {
       .subtitle {
-        // margin-top: 0;
         margin-bottom: 30px;
       }
     }

@@ -9,12 +9,16 @@ html {
 
   width: 100%;
 
-  color: $col-senary;
+  color: $col-quinary;
   background-color: $col-septenary;
   
   text-shadow: none;
   filter: none;
   @include font-smoothing;
+
+  @include media("<lg") {
+    font-size: 96%;
+  }
 }
 
 * {
@@ -148,8 +152,8 @@ pre {
 
 blockquote {
   border-left: 3px solid $col-tertiary;
-  font-style: italic;
-  padding-left: 42px;
+  // font-style: italic;
+  padding-left: $copy-padding-left;
 
   @include media("<lg") {
     padding-left: 24px;
@@ -191,5 +195,5 @@ figcaption {
 /* Text selection colour */
 ::selection {
   color: $col-septenary;
-  background: $col-senary;
+  background: $col-secondary;
 }

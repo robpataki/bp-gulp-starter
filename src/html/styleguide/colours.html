@@ -24,36 +24,6 @@
     
     <div class="page-contents visible-grids">
       <article class="container">
-        <section>
-          <div class="row">
-            <div class="col col-lg-29 mx-auto">
-              <div class="row">
-                <div class="col center">
-                  <p class="headline">The colour palette was designed with simplicity in mind</p>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col col-lg-30 mx-auto">
-                  <p>The idea of the colour system is the following:</p>  
-                  <ol>
-                    <li>The first 3 (primary-tertiary) colours represent the brand</li>
-                    <li>The next 4 (quaternary - septenary) colours are for widely used 'base' colours (white, greys and black). These are used to represent the most basic typographical hierarchy in text and background;</li>
-                    <li>The last 3 colours (octonary - denary) are allocated for input states and feedback - mostly used in forms.</li>
-                  </ol>
-                </div>
-                <!-- <div class="col col-lg-18">
-                  <p>By simply changing the brand colours one can have a neatly customised UI including typographical elements, links, buttons, icons etc. Of course the other colours can be changed too if needed.</p>
-
-                  <blockquote>The application uses inline SVGs, so the UI can use icons in virtually any colour to maximise brand colour truenesness :)</blockquote>
-                </div> -->
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <hr>
-
         <section class="showroom">
           <div class="row">
             <div class="col   col-md-28   col-lg-30 mx-auto   center">
@@ -61,7 +31,17 @@
             </div>
           </div>
 
-          <div class="row center">
+          <div class="row">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-30   col-lg-22   mx-auto center">
+                  <p class="headline">The brand colours are the icing...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row showroom-row center">
             <div class="col   col-md-34   mx-auto">
               <div class="row">
                 
@@ -142,6 +122,17 @@
               </div>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-26 offset-5  col-md-24 offset-md-0">
+                  <p>The brand colours are here to add a brand feel to the colour scheme. The top 3 most brand true colours from the brand's colour palette will make the site unique.</p>
+                  <p>The brand colours are used in <a href="basic-interaction.html#link-section">links</a>, <a href="icons.html#brand-colours">icons</a>, <a href="basic-interaction.html#button-section">buttons</a>, <a href="basic-interaction.html#tab-section">tabs</a>.</p>
+                </div>
+              </div>
+            </div> 
+          </div>
         </section>
 
         <hr>
@@ -150,6 +141,16 @@
           <div class="row">
             <div class="col   col-md-28   col-lg-30 mx-auto   center">
               <h2 class="heading">Base Colours</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-30   col-lg-22   mx-auto center">
+                  <p class="headline">...the base colours are the cake</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -234,17 +235,17 @@
             </div>
           </div>
 
-          <div class="row center">
+          <div class="row">
             <div class="col   col-md-34   mx-auto">
-              <div class="row center">
+              <div class="row showroom-row">
                 <div class="col   col-26 offset-5   col-md-12 offset-md-0">
-                  <div class="row">
+                  <div class="row center">
                     <div class="col">
                       <h4 class="subtitle">{{ colours.base[3].name }}</h4>
                     </div>
                   </div>
                   
-                  <div class="row">
+                  <div class="row center">
                     <div class="col">
                       <div class="colour-box">
                         <div class="colour-box__colour colour-box__colour--light" style="background: {{ colours.base[3].col }}"></div>
@@ -261,7 +262,14 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="col   col-26 offset-5   col-md-24 offset-md-0">
+                  <p class="push-down">The base colours (as the name implies) provide the base foundation to the site's colour scheme. These 4 colours (ranging from black through dark and lighter gray to white) are used to create a well contrast and legible typographic hierarchy.</p>
+                  <p>The base colours are used in <a href="basic-interaction.html#link-section">links</a>, <a href="icons.html#brand-colours">icons</a>, <a href="basic-interaction.html#button-section">buttons</a>, <a href="basic-interaction.html#tab-section">tabs</a>.</p>
+                </div>
               </div>
+
+
             </div>
           </div>
         </section>
@@ -275,7 +283,17 @@
             </div>
           </div>
 
-          <div class="row center">
+          <div class="row">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-30   col-lg-22   mx-auto center">
+                  <p class="headline">The following 3 colours are allocated for giving the user feedback on form input validation results and warnings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row showroom-row center">
             <div class="col   col-md-34   mx-auto">
               <div class="row">
                 <div class="col   col-26 offset-5   col-md-12 offset-md-0">
@@ -356,6 +374,16 @@
             </div>
           </div>
 
+          <div class="row">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-26 offset-5  col-md-24 offset-md-0">
+                  <p>The feedback colours on the palette are allocated for user feedback - mostly used in forms.</p>
+                  <p>The base colours are used in forms to give the user feedback on <a href="forms.html">validation status</a>, and the <a href="interactive-components.html#cookie-message-section">cookie message component</a> uses the warning colour to seek the user's attention.</p>
+                </div>
+              </div>
+            </div> 
+          </div>
         </section>
 
         <hr>
@@ -367,8 +395,18 @@
             </div>
           </div>
 
-          <div class="row center">
-            <div class="col   col-md-36   col-lg-30 mx-auto">
+          <div class="row">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-18   col-md-20   col-lg-16   mx-auto center">
+                  <p class="headline">There are 5 colours allocated for the major social media sharing platforms</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row showroom-row center">
+            <div class="col   col-md-34   mx-auto">
               <div class="row">
                 
                 <div class="col   col-26 offset-5   col-md-12 offset-md-0">
@@ -499,6 +537,16 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="row">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-26 offset-5  col-md-24 offset-md-0">
+                  <p>These colours are primarily used by the <a href="interactive-components.html#social-links-section">social media links</a>, and the <a href="interactive-components.html#social-sharing-section">sharing buttons</a>. You should not use these colours for other purposes to avoid confusing the user.</p>
+                </div>
+              </div>
+            </div> 
           </div>
 
         </section>

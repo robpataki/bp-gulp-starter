@@ -4,7 +4,7 @@
 %heading-base {
   display: block;
   font-family: $bold-font;
-  color: $col-quinary;
+  color: $col-quaternary;
   font-weight: 700;
   margin-bottom: 50px;
   @include font(40px, 45px);
@@ -52,20 +52,25 @@
 }
 
 .headline {
-  @include font(20px, 30px);
+  // @include font(20px, 30px);
+  font-size: 110%;
+  line-height: 160%;
+
   margin-top: 40px;
   margin-bottom: 40px;
   color: $col-primary;
 
   @include media("<lg") {
-    @include font(16px, 30px);
+    // @include font(16px, 30px);
   }
 
   @include media(">=md", "<lg") {
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 
   @include media("<md") {
+    margin-top: 25px;
     margin-bottom: 25px;
   }
 }
@@ -88,11 +93,7 @@
 
 
 .list {
-  padding-left: 18px;
-
-  span {
-    margin-left: 30px;
-  }
+  padding-left: $copy-padding-left;
 
   @include media("<lg") {
       span {
