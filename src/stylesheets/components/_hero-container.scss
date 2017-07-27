@@ -7,7 +7,7 @@
   min-height: 400px;
   margin-bottom: $global-bottom-margin;
   @extend %flex-container;
-  background: desaturate(complement($col-primary), 50%);
+  @extend .hero-container--primary;
 
   .heading--large:not(.no-override) {
     padding: 0 20px 32px 20px;
@@ -44,16 +44,22 @@
   }
 }
 
-.hero-container--secondary {
-  background: desaturate(complement($col-secondary), 50%);
-}
-
-.hero-container--tertiary {
-  background: desaturate(complement($col-tertiary), 50%);
-}
-
 .hero-container--footer {
   height: 30vh;
   min-height: 200px;
   margin-bottom: 0;
+}
+
+
+
+/*
+  * Generate hero container colour variations
+*/
+@each $item in $order {
+  $colour-name: map-get($colours, $item);
+
+  .hero-container--#{$item} {
+    // background: $colour-name
+    background: desaturate($colour-name, 20%);
+  }
 }
