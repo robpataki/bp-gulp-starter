@@ -1,0 +1,117 @@
+/*
+  COMPONENT / Field
+*/
+.fields {}
+
+.field-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-right: 2px;
+
+  &.is-valid {
+    .field, .field:focus {
+      border-color: $col-octonary;
+    }
+
+    .icon g {
+      fill: $col-octonary;
+    }
+
+    .icon--valid {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &.is-invalid {
+    .field, .field:focus {
+      border-color: $col-denary;
+    }
+
+    .icon g {
+      fill: $col-denary;
+    }
+
+    .icon--invalid {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.field-label {
+  font-family: $semibold-font;
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  color: $col-quinary;
+
+  font-size: 81.25%;
+  line-height: 160%;
+}
+
+.field__icons {
+  position: absolute;
+  // top: 48px;
+  bottom: 39px;
+  right: 50px;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include link-hover(0.24s);
+    @extend %transition-ease-in-out-expo;
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
+
+.field {
+  display: block;
+  position: relative;
+  line-height: 1em;
+  width: 100%;
+  padding: 11px 20px;
+  background: $col-septenary;
+  border: 1px solid lighten($col-quinary, 50%);
+  border-radius: $global-radius;
+  font-size: 87.5%;
+  line-height: 160%;
+  color: $col-quaternary;
+
+  @include link-hover;
+  @extend %transition-ease-out-quart;
+
+  &:focus {
+    border-color: $col-quinary;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    user-select: none;
+  }
+}
+
+.field--textarea {
+  padding: 16px 20px;
+  height: 210px;
+}
+
+html.is-ie {
+  .field {
+    line-height: 0;
+  }
+
+  .field--textarea {
+    line-height: 1.4em;
+  }
+
+  .field__icons {
+    top: 42px;
+    right: 42px;
+  }
+}

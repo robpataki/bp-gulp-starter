@@ -90,13 +90,12 @@ input[type='datetime'],
 input[type='datetime-local'],
 input[type='color'] {
   font-family: inherit;
-  padding: .5rem 1rem;
-  color: $col-primary;
-  border: none;
-  border-bottom: 2px solid $col-septenary;
   outline: none;
   background: transparent;
   box-shadow: none;
+}
+textarea {
+  resize: none;
 }
 
 button {

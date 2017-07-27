@@ -5,7 +5,7 @@
   position: relative;
   display: inline-block;
   text-align: center;
-  border-radius: 24px;
+  border-radius: $global-radius;
   @include font(14px, 27px);
   font-family: $regular-font;
   user-select: none;

@@ -1,0 +1,254 @@
+{% extends 'layouts/styleguide.html' %}
+
+{% block content %}
+  <div class="page page--demo page--simple-interaction">
+    <div class="hero-container hero-container--senary">
+      <div class="row">
+        <div class="coll">
+          <a href="index.html" class="close-screen-button">
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__cross.svg.html' %}
+            </span>
+          </a>
+
+          <h1 class="heading heading--large">Forms</h1>
+          
+          <button class="bubble bubble--arrow-down ws-trigger" data-ws-el="page-contents">
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__button-down.svg.html' %}
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="page-contents visible-grids">
+      <article class="container">
+        <section class="showroom">
+          <div class="row">
+            <div class="col   col-md-28   col-lg-30 mx-auto   center">
+              <h2 class="heading">Fields</h2>
+            </div>
+          </div>
+
+          <form class="row showroom-row" tabindex="1">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-30   col-lg-22   mx-auto center">
+                  <h3 class="subheading">Default fields</h3>
+                </div>
+              </div>
+
+              <div class="row showroom-row">
+                <div class="col   col-26 offset-5   col-lg-16 offset-lg-2">
+                  <div class="field-wrapper">
+                    <label for="fullname" class="field-label">Full name</label>
+                    <input type="text" id="fullname" name="fullname" tabindex="1" class="field" value="" placeholder="Steve Jobs" autocomplete="off">
+                    <div class="field__icons">
+                      <span class="icon icon--invalid">
+                        {% include "shared/icons/icon__failure.svg.html" %}
+                      </span>
+                      <span class="icon icon--valid">
+                        {% include "shared/icons/icon__success.svg.html" %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-lg-16 offset-lg-0">
+                  <div class="field-wrapper">
+                    <label for="fullname" class="field-label">Email address</label>
+                    <input type="text" id="email" name="email" tabindex="1" class="field" value="" placeholder="stevejobs@apple.com" autocomplete="off" autocapitalize="off" autocorrect="off">
+                    <div class="field__icons">
+                      <span class="icon icon--invalid">
+                        {% include "shared/icons/icon__failure.svg.html" %}
+                      </span>
+                      <span class="icon icon--valid">
+                        {% include "shared/icons/icon__success.svg.html" %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col   col-26 offset-5   col-lg-32 offset-lg-2">
+                  <div class="field-wrapper">
+                    <label for="message" class="field-label">Your message</label>
+                    <textarea id="message" name="message" tabindex="1" class="field field--textarea" value="" placeholder="Your message"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="row showroom-row" tabindex="2" disabled>
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-30   col-lg-22   mx-auto center">
+                  <h3 class="subheading">Disabled fields</h3>
+                </div>
+              </div>
+
+              <div class="row showroom-row">
+                <div class="col   col-26 offset-5   col-lg-16 offset-lg-2">
+                  <div class="field-wrapper">
+                    <label for="fullname" class="field-label">Full name</label>
+                    <input type="text" id="fullname" name="fullname" tabindex="1" class="field" value="" placeholder="Steve Jobs" autocomplete="off" disabled>
+                    <div class="field__icons">
+                      <span class="icon icon--invalid">
+                        {% include "shared/icons/icon__failure.svg.html" %}
+                      </span>
+                      <span class="icon icon--valid">
+                        {% include "shared/icons/icon__success.svg.html" %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-lg-16 offset-lg-0">
+                  <div class="field-wrapper">
+                    <label for="fullname" class="field-label">Email address</label>
+                    <input type="text" id="email" name="email" tabindex="1" class="field" value="" placeholder="stevejobs@apple.com" autocomplete="off" autocapitalize="off" autocorrect="off" disabled>
+                    <div class="field__icons">
+                      <span class="icon icon--invalid">
+                        {% include "shared/icons/icon__failure.svg.html" %}
+                      </span>
+                      <span class="icon icon--valid">
+                        {% include "shared/icons/icon__success.svg.html" %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col   col-26 offset-5   col-lg-32 offset-lg-2">
+                  <div class="field-wrapper">
+                    <label for="message" class="field-label">Your message</label>
+                    <textarea id="message" name="message" tabindex="1" class="field field--textarea" value="" placeholder="Your message" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="row showroom-row" tabindex="3">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-30   col-lg-22   mx-auto center">
+                  <h3 class="subheading">Valid fields</h3>
+                </div>
+              </div>
+
+              <div class="row showroom-row">
+                <div class="col   col-26 offset-5   col-lg-16 offset-lg-2">
+                  <div class="field-wrapper is-valid">
+                    <label for="fullname" class="field-label">Full name</label>
+                    <input type="text" id="fullname" name="fullname" tabindex="1" class="field" value="" placeholder="Steve Jobs" autocomplete="off">
+                    <div class="field__icons">
+                      <span class="icon icon--invalid">
+                        {% include "shared/icons/icon__failure.svg.html" %}
+                      </span>
+                      <span class="icon icon--valid">
+                        {% include "shared/icons/icon__success.svg.html" %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-lg-16 offset-lg-0">
+                  <div class="field-wrapper is-valid">
+                    <label for="fullname" class="field-label">Email address</label>
+                    <input type="text" id="email" name="email" tabindex="1" class="field" value="" placeholder="stevejobs@apple.com" autocomplete="off" autocapitalize="off" autocorrect="off">
+                    <div class="field__icons">
+                      <span class="icon icon--invalid">
+                        {% include "shared/icons/icon__failure.svg.html" %}
+                      </span>
+                      <span class="icon icon--valid">
+                        {% include "shared/icons/icon__success.svg.html" %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col   col-26 offset-5   col-lg-32 offset-lg-2">
+                  <div class="field-wrapper is-valid">
+                    <label for="message" class="field-label">Your message</label>
+                    <textarea id="message" name="message" tabindex="1" class="field field--textarea" value="" placeholder="Your message"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="row showroom-row" tabindex="4">
+            <div class="col   col-md-34   mx-auto">
+              <div class="row">
+                <div class="col   col-30   col-lg-22   mx-auto center">
+                  <h3 class="subheading">Invalid fields</h3>
+                </div>
+              </div>
+
+              <div class="row showroom-row">
+                <div class="col   col-26 offset-5   col-lg-16 offset-lg-2">
+                  <div class="field-wrapper is-invalid">
+                    <label for="fullname" class="field-label">Full name</label>
+                    <input type="text" id="fullname" name="fullname" tabindex="1" class="field" value="" placeholder="Steve Jobs" autocomplete="off">
+                    <div class="field__icons">
+                      <span class="icon icon--invalid">
+                        {% include "shared/icons/icon__failure.svg.html" %}
+                      </span>
+                      <span class="icon icon--valid">
+                        {% include "shared/icons/icon__success.svg.html" %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col   col-26 offset-5   col-lg-16 offset-lg-0">
+                  <div class="field-wrapper is-invalid">
+                    <label for="fullname" class="field-label">Email address</label>
+                    <input type="text" id="email" name="email" tabindex="1" class="field" value="" placeholder="stevejobs@apple.com" autocomplete="off" autocapitalize="off" autocorrect="off">
+                    <div class="field__icons">
+                      <span class="icon icon--invalid">
+                        {% include "shared/icons/icon__failure.svg.html" %}
+                      </span>
+                      <span class="icon icon--valid">
+                        {% include "shared/icons/icon__success.svg.html" %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col   col-26 offset-5   col-lg-32 offset-lg-2">
+                  <div class="field-wrapper is-invalid">
+                    <label for="message" class="field-label">Your message</label>
+                    <textarea id="message" name="message" tabindex="1" class="field field--textarea" value="" placeholder="Your message"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </article>
+    </div>
+
+     <div class="hero-container hero-container--senary hero-container--footer">
+      <div class="row">
+        <div class="col">          
+          <button class="bubble bubble--arrow-up ws-trigger" data-ws-el="page">
+            <span class="icon icon--quaternary">
+              {% include 'shared/icons/icon__button-up.svg.html' %}
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}
