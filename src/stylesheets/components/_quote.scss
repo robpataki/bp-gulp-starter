@@ -1,0 +1,76 @@
+/* Quote */
+.quote {
+  display: block;
+  position: relative;
+  border-left: none;
+  margin: $global-bottom-margin * 2 auto 0;
+  font-size: 130%;
+
+  @include media("<xl") {
+    margin-top: 0;
+  }
+
+  @include media("<xl", ">md") {
+    font-size: 110%;
+    margin: $global-bottom-margin * 1.1 auto 0;
+  }
+
+  @include media("<lg") {
+    font-size: 140%;
+    padding: $global-bottom-margin * 1.5 0 0 0;
+    margin: $global-bottom-margin * 1.5 auto 0;
+  }
+
+  @include media("<md") {
+    font-size: 120%;
+  }
+}
+
+.quote__text {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+
+  span { 
+    position: relative; 
+    height: 20px;
+  }
+
+  .quote__mark {
+    position: absolute; 
+    top: 10px;
+    line-height: 20px;
+    text-indent: 0;
+
+    font-size: 400%;
+    color: #007ac2;
+  }
+
+  .quote__mark--left { 
+    left: -40px;
+  }
+
+  .quote__mark--right { 
+    left: 15px;
+    top: 30px;
+  }
+}
+
+.quote__author {
+  display: block;
+  position: relative;
+  @include font(12px, 22px);
+  font-family: $regular-font;
+  font-weight: 700;
+  margin: $global-bottom-margin $global-bottom-margin * 0.5 20px 0;
+  height: auto !important;
+}
+
+.quote + .button {
+  display: inline-block;
+  margin-left: $global-bottom-margin * 0.5;
+
+  @include media("<lg") {
+    margin-left: 0;
+  }
+}
